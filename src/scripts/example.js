@@ -1,7 +1,7 @@
 class Example {
     constructor(ele) {
         this.ele = ele
-        this.ele.innerHTML = "<h1>It's CAPY ALIVEEEE!!!</h1>"
+        this.ele.innerHTML = "<h1>HEY THIS IS ANIMATION BRANCH!!!</h1>"
 
         this.handleClick = this.handleClick.bind(this);
         this.ele.addEventListener("click", this.handleClick)
