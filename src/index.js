@@ -95,7 +95,7 @@ const requestOptions = {
         redirect: 'follow'
     };
 
-let data
+
 
 async function fetchValue () {
     const response = await fetch("https://accounts.spotify.com/api/token", requestOptions);
@@ -108,7 +108,26 @@ async function fetchValue () {
 
 // console.log(fetchValue());
 
-fetchValue().then((access_token => console.log(access_token)))
+
+
+
+
+fetchValue().then(access_token => {
+    let requestOptions2 = {
+        method: 'GET',
+        headers: { "Authorization": `Bearer ${access_token}`,
+        "Content-Type": "application/json"}}
+
+    console.log(requestOptions2);
+    
+    fetch("https://api.spotify.com/v1/audio-features/7KrtV0Rdwn7lAtXs9DD3O0", requestOptions2)
+    .then(data => console.log(data))
+    //inside here, make that fetch request to the API instead of console.log!
+    });
 // console.log(data);
 // console.log(typeof fetchValue);
 // fetchValue();
+
+//cors policy error
+//I could use another server to make a request for me. Talk to stephen
+//Get data from postman and put it into a file and work from there
