@@ -106,7 +106,9 @@ async function fetchValue () {
     // .then(result => data = result)
     // .catch(error => console.log('error', error));
 
-console.log(fetchValue());
+// console.log(fetchValue());
+
+fetchValue().then((access_token => console.log(access_token)))
 // console.log(data);
 // console.log(typeof fetchValue);
 // fetchValue();
