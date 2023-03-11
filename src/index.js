@@ -102,32 +102,24 @@ async function fetchValue () {
     const data = await response.json();
     return data.access_token;
 }
-    // .then(response => response.text())
-    // .then(result => data = result)
-    // .catch(error => console.log('error', error));
-
-// console.log(fetchValue());
 
 
 
 
-
-fetchValue().then(access_token => {
-    let requestOptions2 = {
-        method: 'GET',
-        headers: { "Authorization": `Bearer ${access_token}`,
-        "Content-Type": "application/json"}}
-
-    console.log(requestOptions2);
-    
-    fetch("https://api.spotify.com/v1/audio-features/7KrtV0Rdwn7lAtXs9DD3O0", requestOptions2)
-    .then(data => console.log(data))
-    //inside here, make that fetch request to the API instead of console.log!
-    });
-// console.log(data);
-// console.log(typeof fetchValue);
-// fetchValue();
-
+// async function fetchData() {
+//     const accessToken = await fetchValue();
+//     const trackData = 
+//     fetchValue().then(access_token => {
+//         requestOptions.method = 'GET'; //changing method to get
+//         myHeaders.set("Authorization", `Bearer ${access_token}`)
+//         myHeaders.append("Content-Type", "application/json") 
+//         console.log(requestOptions);
+        
+//         fetch("https://api.spotify.com/v1/audio-features/7KrtV0Rdwn7lAtXs9DD3O0", requestOptions)
+//         .then(data => console.log(data))
+//         //inside here, make that fetch request to the API instead of console.log!
+//     });
+// }
 //cors policy error
 //I could use another server to make a request for me. Talk to stephen
 //Get data from postman and put it into a file and work from there
