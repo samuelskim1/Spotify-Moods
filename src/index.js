@@ -4,38 +4,6 @@ import Example from "./scripts/example";
 /* const name require("string of name of library installed") when you're referencing from a node modular/external library (node_modules folder);
 Otherwise, if it's a relative file/other script files locally, then use import " " from ""
 */
-// let holder = null;
-
-// async function accessToken() {
-    // try 
-    //     const requestOptions = {
-    //         method: 'POST',
-    //         headers: myHeaders,
-    //         body: urlencoded,
-    //         redirect: 'follow'
-    //     };
-
-    //     let response = await fetch("https://accounts.spotify.com/api/token", requestOptions);
-    //     let token = await response.json(); // got token
-
-    //     holder = token;
-    //     return holder;
-    // catch error;
-// }
-
-// async function useToken() {
-//     if (!holder) {
-//         await accessToken();
-//     }
-
-//     const token = {...holder};
-//     return token;
-// }
-
-
-// async function getData(token) {
-
-// }
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,6 +40,9 @@ URLSearchParams is a interface of URL API
 
 const CryptoJS = require("crypto-js");
 
+let trackData = null;
+
+
 let clientId = "c6ae676c7dbe41cc918d0af0bb9db221";
 let clientSecret = "73757d0802ae4bbead3c43e5805e3a10";
 let stringToEncode = `${clientId}:${clientSecret}`;
@@ -95,31 +66,41 @@ const requestOptions = {
         redirect: 'follow'
     };
 
-
-
 async function fetchValue () {
-    const response = await fetch("https://accounts.spotify.com/api/token", requestOptions);
-    const data = await response.json();
-    return data.access_token;
+    try {
+        const response = await fetch("https://accounts.spotify.com/api/token", requestOptions);
+        console.log('fetch made')
+        const token = await response.json();
+        console.log('token made into a JS object')
+        console.log(token.access_token);
+        return token.access_token;
+    } catch (error) {
+        console.log(error);
+    }
 }
 
+fetchValue();
+
+async function fetchData() {
+    const accessToken = await fetchValue(); //return value of access_token
+    requestOptions.method = 'GET'; //changing method to get
+    myHeaders.set("Authorization", `Bearer ${accessToken}`);
+    myHeaders.append("Content-Type", "application/json");
+    delete requestOptions.body;
+    console.log(requestOptions);
+    
+    fetch("https://api.spotify.com/v1/audio-features/1RMJOxR6GRPsBHL8qeC2ux", requestOptions)
+    //song = Best Part - Daniel Caesar 
+        .then(response => response.json())
+        .then(data => console.log(data));
+};
+
+fetchData();
+
+debugger;
 
 
-
-// async function fetchData() {
-//     const accessToken = await fetchValue();
-//     const trackData = 
-//     fetchValue().then(access_token => {
-//         requestOptions.method = 'GET'; //changing method to get
-//         myHeaders.set("Authorization", `Bearer ${access_token}`)
-//         myHeaders.append("Content-Type", "application/json") 
-//         console.log(requestOptions);
-        
-//         fetch("https://api.spotify.com/v1/audio-features/7KrtV0Rdwn7lAtXs9DD3O0", requestOptions)
-//         .then(data => console.log(data))
-//         //inside here, make that fetch request to the API instead of console.log!
-//     });
-// }
 //cors policy error
 //I could use another server to make a request for me. Talk to stephen
 //Get data from postman and put it into a file and work from there
+
