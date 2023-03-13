@@ -1,49 +1,51 @@
 {
-    "audio_features" : {
-        "danceability": 0.707,
-        "energy": 0.238,
-        "key": 3,
-        "loudness": -8.818,
-        "mode": 1,
-        "speechiness": 0.0379,
-        "acousticness": 0.0905,
-        "instrumentalness": 0.00000242,
-        "liveness": 0.0842,
-        "valence": 0.345,
-        "tempo": 124.156,
+    "audio_features" :  {
+        "danceability": 0.589,
+        "energy": 0.487,
+        "key": 5,
+        "loudness": -6.916,
+        "mode": 0,
+        "speechiness": 0.066,
+        "acousticness": 0.371,
+        "instrumentalness": 0.000573,
+        "liveness": 0.113,
+        "valence": 0.627,
+        "tempo": 153.821,
         "type": "audio_features",
-        "id": "1boXOL0ua7N2iCOUVI1p9F",
-        "uri": "spotify:track:1boXOL0ua7N2iCOUVI1p9F",
-        "track_href": "https://api.spotify.com/v1/tracks/1boXOL0ua7N2iCOUVI1p9F",
-        "analysis_url": "https://api.spotify.com/v1/audio-analysis/1boXOL0ua7N2iCOUVI1p9F",
-        "duration_ms": 270847,
-        "time_signature": 3
+        "id": "7rcL5IBSL2iInm5IPjAC2K",
+        "uri": "spotify:track:7rcL5IBSL2iInm5IPjAC2K",
+        "track_href": "https://api.spotify.com/v1/tracks/7rcL5IBSL2iInm5IPjAC2K",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/7rcL5IBSL2iInm5IPjAC2K",
+        "duration_ms": 259155,
+        "time_signature": 4
     },
     "album": {
-        "album_group": "single",
-        "album_type": "single",
+        "album_group": "album",
+        "album_type": "album",
         "artists": [
             {
                 "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+                    "spotify": "https://open.spotify.com/artist/4BBN286rBKyCWsSPq2cxYO"
                 },
-                "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-                "id": "20wkVLutqVOYrc0kxFs7rA",
-                "name": "Daniel Caesar",
+                "href": "https://api.spotify.com/v1/artists/4BBN286rBKyCWsSPq2cxYO",
+                "id": "4BBN286rBKyCWsSPq2cxYO",
+                "name": "Sam Kim",
                 "type": "artist",
-                "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+                "uri": "spotify:artist:4BBN286rBKyCWsSPq2cxYO"
             }
         ],
         "available_markets": [
             "AD",
             "AE",
             "AG",
+            "AL",
             "AM",
             "AO",
             "AR",
             "AT",
             "AU",
             "AZ",
+            "BA",
             "BB",
             "BD",
             "BE",
@@ -58,10 +60,13 @@
             "BS",
             "BT",
             "BW",
+            "BY",
             "BZ",
             "CA",
+            "CD",
             "CG",
             "CH",
+            "CI",
             "CL",
             "CM",
             "CO",
@@ -80,7 +85,6 @@
             "EE",
             "EG",
             "ES",
-            "ET",
             "FI",
             "FJ",
             "FM",
@@ -99,12 +103,14 @@
             "GY",
             "HK",
             "HN",
+            "HR",
             "HT",
             "HU",
             "ID",
             "IE",
             "IL",
             "IN",
+            "IQ",
             "IS",
             "IT",
             "JM",
@@ -124,15 +130,19 @@
             "LC",
             "LI",
             "LK",
+            "LR",
             "LS",
             "LT",
             "LU",
             "LV",
+            "LY",
             "MA",
             "MC",
             "MD",
+            "ME",
             "MG",
             "MH",
+            "MK",
             "ML",
             "MN",
             "MO",
@@ -166,6 +176,7 @@
             "PY",
             "QA",
             "RO",
+            "RS",
             "RW",
             "SA",
             "SB",
@@ -203,48 +214,50 @@
             "VN",
             "VU",
             "WS",
+            "XK",
             "ZA",
-            "ZM"
+            "ZM",
+            "ZW"
         ],
         "external_urls": {
-            "spotify": "https://open.spotify.com/album/5qfhZ5YkZ4LhEUbYgjrWt6"
+            "spotify": "https://open.spotify.com/album/0AsQlY5YENtlvd8SLnrSxX"
         },
-        "href": "https://api.spotify.com/v1/albums/5qfhZ5YkZ4LhEUbYgjrWt6",
-        "id": "5qfhZ5YkZ4LhEUbYgjrWt6",
+        "href": "https://api.spotify.com/v1/albums/0AsQlY5YENtlvd8SLnrSxX",
+        "id": "0AsQlY5YENtlvd8SLnrSxX",
         "images": [
             {
                 "height": 640,
-                "url": "https://i.scdn.co/image/ab67616d0000b273617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d0000b2738368fc4dff4622c0e00e6dbf",
                 "width": 640
             },
             {
                 "height": 300,
-                "url": "https://i.scdn.co/image/ab67616d00001e02617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d00001e028368fc4dff4622c0e00e6dbf",
                 "width": 300
             },
             {
                 "height": 64,
-                "url": "https://i.scdn.co/image/ab67616d00004851617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d000048518368fc4dff4622c0e00e6dbf",
                 "width": 64
             }
         ],
-        "name": "Get You - Single",
-        "release_date": "2016-10-21",
+        "name": "Sun And Moon",
+        "release_date": "2018-11-22",
         "release_date_precision": "day",
-        "total_tracks": 2,
+        "total_tracks": 8,
         "type": "album",
-        "uri": "spotify:album:5qfhZ5YkZ4LhEUbYgjrWt6"
+        "uri": "spotify:album:0AsQlY5YENtlvd8SLnrSxX"
     },
     "artists": [
         {
             "external_urls": {
-                "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+                "spotify": "https://open.spotify.com/artist/4BBN286rBKyCWsSPq2cxYO"
             },
-            "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-            "id": "20wkVLutqVOYrc0kxFs7rA",
-            "name": "Daniel Caesar",
+            "href": "https://api.spotify.com/v1/artists/4BBN286rBKyCWsSPq2cxYO",
+            "id": "4BBN286rBKyCWsSPq2cxYO",
+            "name": "Sam Kim",
             "type": "artist",
-            "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+            "uri": "spotify:artist:4BBN286rBKyCWsSPq2cxYO"
         }
     ],
     "available_markets": [
@@ -327,9 +340,16 @@
         "JO",
         "PS",
         "IN",
+        "BY",
         "KZ",
         "MD",
         "UA",
+        "AL",
+        "BA",
+        "HR",
+        "ME",
+        "MK",
+        "RS",
         "SI",
         "KR",
         "BD",
@@ -361,6 +381,7 @@
         "JM",
         "KI",
         "LS",
+        "LR",
         "MW",
         "MV",
         "ML",
@@ -407,35 +428,41 @@
         "RW",
         "TG",
         "UZ",
+        "ZW",
         "BJ",
         "MG",
         "MU",
         "MZ",
         "AO",
+        "CI",
         "DJ",
         "ZM",
+        "CD",
         "CG",
+        "IQ",
+        "LY",
         "TJ",
         "VE",
-        "ET"
+        "ET",
+        "XC",
+        "XK"
     ],
     "disc_number": 1,
-    "duration_ms": 270846,
-    "explicit": true,
+    "duration_ms": 259155,
+    "explicit": false,
     "external_ids": {
-        "isrc": "TCACR1690007"
+        "isrc": "KRA381802014"
     },
     "external_urls": {
-        "spotify": "https://open.spotify.com/track/1boXOL0ua7N2iCOUVI1p9F"
+        "spotify": "https://open.spotify.com/track/7rcL5IBSL2iInm5IPjAC2K"
     },
-    "href": "https://api.spotify.com/v1/tracks/1boXOL0ua7N2iCOUVI1p9F",
-    "id": "1boXOL0ua7N2iCOUVI1p9F",
+    "href": "https://api.spotify.com/v1/tracks/7rcL5IBSL2iInm5IPjAC2K",
+    "id": "7rcL5IBSL2iInm5IPjAC2K",
     "is_local": false,
-    "name": "Japanese Denim",
-    "popularity": 74,
-    "preview_url": "https://p.scdn.co/mp3-preview/ee5340b8b4f71426681b2a59a5118fd14ea19b4f?cid=c6ae676c7dbe41cc918d0af0bb9db221",
-    "track_number": 2,
+    "name": "The One",
+    "popularity": 32,
+    "preview_url": "https://p.scdn.co/mp3-preview/2f140126bfe12111ff2a88fd7a4abff0b57c7342?cid=c6ae676c7dbe41cc918d0af0bb9db221",
+    "track_number": 5,
     "type": "track",
-    "uri": "spotify:track:1boXOL0ua7N2iCOUVI1p9F"
-
+    "uri": "spotify:track:7rcL5IBSL2iInm5IPjAC2K"
 }

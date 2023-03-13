@@ -1,22 +1,23 @@
 {
-    "audio_features" : {
-        "danceability": 0.707,
-        "energy": 0.238,
-        "key": 3,
-        "loudness": -8.818,
-        "mode": 1,
-        "speechiness": 0.0379,
-        "acousticness": 0.0905,
-        "instrumentalness": 0.00000242,
-        "liveness": 0.0842,
-        "valence": 0.345,
-        "tempo": 124.156,
+    "audio_features": {
+
+        "danceability": 0.725,
+        "energy": 0.258,
+        "key": 11,
+        "loudness": -14.065,
+        "mode": 0,
+        "speechiness": 0.255,
+        "acousticness": 0.668,
+        "instrumentalness": 0.0000263,
+        "liveness": 0.0955,
+        "valence": 0.173,
+        "tempo": 127.876,
         "type": "audio_features",
-        "id": "1boXOL0ua7N2iCOUVI1p9F",
-        "uri": "spotify:track:1boXOL0ua7N2iCOUVI1p9F",
-        "track_href": "https://api.spotify.com/v1/tracks/1boXOL0ua7N2iCOUVI1p9F",
-        "analysis_url": "https://api.spotify.com/v1/audio-analysis/1boXOL0ua7N2iCOUVI1p9F",
-        "duration_ms": 270847,
+        "id": "7pt64sepCy5QmDrgy9wOJS",
+        "uri": "spotify:track:7pt64sepCy5QmDrgy9wOJS",
+        "track_href": "https://api.spotify.com/v1/tracks/7pt64sepCy5QmDrgy9wOJS",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/7pt64sepCy5QmDrgy9wOJS",
+        "duration_ms": 184500,
         "time_signature": 3
     },
     "album": {
@@ -25,25 +26,27 @@
         "artists": [
             {
                 "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+                    "spotify": "https://open.spotify.com/artist/2gIHyzlzKxntjQWf8xAGaI"
                 },
-                "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-                "id": "20wkVLutqVOYrc0kxFs7rA",
-                "name": "Daniel Caesar",
+                "href": "https://api.spotify.com/v1/artists/2gIHyzlzKxntjQWf8xAGaI",
+                "id": "2gIHyzlzKxntjQWf8xAGaI",
+                "name": "Kamal.",
                 "type": "artist",
-                "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+                "uri": "spotify:artist:2gIHyzlzKxntjQWf8xAGaI"
             }
         ],
         "available_markets": [
             "AD",
             "AE",
             "AG",
+            "AL",
             "AM",
             "AO",
             "AR",
             "AT",
             "AU",
             "AZ",
+            "BA",
             "BB",
             "BD",
             "BE",
@@ -58,10 +61,13 @@
             "BS",
             "BT",
             "BW",
+            "BY",
             "BZ",
             "CA",
+            "CD",
             "CG",
             "CH",
+            "CI",
             "CL",
             "CM",
             "CO",
@@ -99,12 +105,14 @@
             "GY",
             "HK",
             "HN",
+            "HR",
             "HT",
             "HU",
             "ID",
             "IE",
             "IL",
             "IN",
+            "IQ",
             "IS",
             "IT",
             "JM",
@@ -124,15 +132,19 @@
             "LC",
             "LI",
             "LK",
+            "LR",
             "LS",
             "LT",
             "LU",
             "LV",
+            "LY",
             "MA",
             "MC",
             "MD",
+            "ME",
             "MG",
             "MH",
+            "MK",
             "ML",
             "MN",
             "MO",
@@ -166,6 +178,7 @@
             "PY",
             "QA",
             "RO",
+            "RS",
             "RW",
             "SA",
             "SB",
@@ -203,48 +216,50 @@
             "VN",
             "VU",
             "WS",
+            "XK",
             "ZA",
-            "ZM"
+            "ZM",
+            "ZW"
         ],
         "external_urls": {
-            "spotify": "https://open.spotify.com/album/5qfhZ5YkZ4LhEUbYgjrWt6"
+            "spotify": "https://open.spotify.com/album/3GsV8bdcTiMKRlrRlnnHvo"
         },
-        "href": "https://api.spotify.com/v1/albums/5qfhZ5YkZ4LhEUbYgjrWt6",
-        "id": "5qfhZ5YkZ4LhEUbYgjrWt6",
+        "href": "https://api.spotify.com/v1/albums/3GsV8bdcTiMKRlrRlnnHvo",
+        "id": "3GsV8bdcTiMKRlrRlnnHvo",
         "images": [
             {
                 "height": 640,
-                "url": "https://i.scdn.co/image/ab67616d0000b273617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d0000b273583ea833d682bb284c5905b4",
                 "width": 640
             },
             {
                 "height": 300,
-                "url": "https://i.scdn.co/image/ab67616d00001e02617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d00001e02583ea833d682bb284c5905b4",
                 "width": 300
             },
             {
                 "height": 64,
-                "url": "https://i.scdn.co/image/ab67616d00004851617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d00004851583ea833d682bb284c5905b4",
                 "width": 64
             }
         ],
-        "name": "Get You - Single",
-        "release_date": "2016-10-21",
+        "name": "blue",
+        "release_date": "2020-05-20",
         "release_date_precision": "day",
-        "total_tracks": 2,
+        "total_tracks": 1,
         "type": "album",
-        "uri": "spotify:album:5qfhZ5YkZ4LhEUbYgjrWt6"
+        "uri": "spotify:album:3GsV8bdcTiMKRlrRlnnHvo"
     },
     "artists": [
         {
             "external_urls": {
-                "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+                "spotify": "https://open.spotify.com/artist/2gIHyzlzKxntjQWf8xAGaI"
             },
-            "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-            "id": "20wkVLutqVOYrc0kxFs7rA",
-            "name": "Daniel Caesar",
+            "href": "https://api.spotify.com/v1/artists/2gIHyzlzKxntjQWf8xAGaI",
+            "id": "2gIHyzlzKxntjQWf8xAGaI",
+            "name": "Kamal.",
             "type": "artist",
-            "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+            "uri": "spotify:artist:2gIHyzlzKxntjQWf8xAGaI"
         }
     ],
     "available_markets": [
@@ -327,9 +342,16 @@
         "JO",
         "PS",
         "IN",
+        "BY",
         "KZ",
         "MD",
         "UA",
+        "AL",
+        "BA",
+        "HR",
+        "ME",
+        "MK",
+        "RS",
         "SI",
         "KR",
         "BD",
@@ -361,6 +383,7 @@
         "JM",
         "KI",
         "LS",
+        "LR",
         "MW",
         "MV",
         "ML",
@@ -407,35 +430,40 @@
         "RW",
         "TG",
         "UZ",
+        "ZW",
         "BJ",
         "MG",
         "MU",
         "MZ",
         "AO",
+        "CI",
         "DJ",
         "ZM",
+        "CD",
         "CG",
+        "IQ",
+        "LY",
         "TJ",
         "VE",
-        "ET"
+        "ET",
+        "XK"
     ],
     "disc_number": 1,
-    "duration_ms": 270846,
-    "explicit": true,
+    "duration_ms": 184500,
+    "explicit": false,
     "external_ids": {
-        "isrc": "TCACR1690007"
+        "isrc": "GBUM72002067"
     },
     "external_urls": {
-        "spotify": "https://open.spotify.com/track/1boXOL0ua7N2iCOUVI1p9F"
+        "spotify": "https://open.spotify.com/track/7pt64sepCy5QmDrgy9wOJS"
     },
-    "href": "https://api.spotify.com/v1/tracks/1boXOL0ua7N2iCOUVI1p9F",
-    "id": "1boXOL0ua7N2iCOUVI1p9F",
+    "href": "https://api.spotify.com/v1/tracks/7pt64sepCy5QmDrgy9wOJS",
+    "id": "7pt64sepCy5QmDrgy9wOJS",
     "is_local": false,
-    "name": "Japanese Denim",
-    "popularity": 74,
-    "preview_url": "https://p.scdn.co/mp3-preview/ee5340b8b4f71426681b2a59a5118fd14ea19b4f?cid=c6ae676c7dbe41cc918d0af0bb9db221",
-    "track_number": 2,
+    "name": "blue",
+    "popularity": 59,
+    "preview_url": null,
+    "track_number": 1,
     "type": "track",
-    "uri": "spotify:track:1boXOL0ua7N2iCOUVI1p9F"
-
+    "uri": "spotify:track:7pt64sepCy5QmDrgy9wOJS"
 }

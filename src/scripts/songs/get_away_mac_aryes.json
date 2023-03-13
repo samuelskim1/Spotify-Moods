@@ -1,49 +1,52 @@
 {
-    "audio_features" : {
-        "danceability": 0.707,
-        "energy": 0.238,
-        "key": 3,
-        "loudness": -8.818,
+    "audio_features": {
+
+        "danceability": 0.676,
+        "energy": 0.672,
+        "key": 6,
+        "loudness": -4.557,
         "mode": 1,
-        "speechiness": 0.0379,
-        "acousticness": 0.0905,
-        "instrumentalness": 0.00000242,
-        "liveness": 0.0842,
-        "valence": 0.345,
-        "tempo": 124.156,
+        "speechiness": 0.07,
+        "acousticness": 0.287,
+        "instrumentalness": 0.0000367,
+        "liveness": 0.103,
+        "valence": 0.322,
+        "tempo": 87.687,
         "type": "audio_features",
-        "id": "1boXOL0ua7N2iCOUVI1p9F",
-        "uri": "spotify:track:1boXOL0ua7N2iCOUVI1p9F",
-        "track_href": "https://api.spotify.com/v1/tracks/1boXOL0ua7N2iCOUVI1p9F",
-        "analysis_url": "https://api.spotify.com/v1/audio-analysis/1boXOL0ua7N2iCOUVI1p9F",
-        "duration_ms": 270847,
-        "time_signature": 3
+        "id": "5rlN7kWG5R7de0emQYkXaS",
+        "uri": "spotify:track:5rlN7kWG5R7de0emQYkXaS",
+        "track_href": "https://api.spotify.com/v1/tracks/5rlN7kWG5R7de0emQYkXaS",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/5rlN7kWG5R7de0emQYkXaS",
+        "duration_ms": 308825,
+        "time_signature": 4
     },
     "album": {
-        "album_group": "single",
-        "album_type": "single",
+        "album_group": "album",
+        "album_type": "album",
         "artists": [
             {
                 "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+                    "spotify": "https://open.spotify.com/artist/0fTav4sBLmYOAzKuJw0grL"
                 },
-                "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-                "id": "20wkVLutqVOYrc0kxFs7rA",
-                "name": "Daniel Caesar",
+                "href": "https://api.spotify.com/v1/artists/0fTav4sBLmYOAzKuJw0grL",
+                "id": "0fTav4sBLmYOAzKuJw0grL",
+                "name": "Mac Ayres",
                 "type": "artist",
-                "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+                "uri": "spotify:artist:0fTav4sBLmYOAzKuJw0grL"
             }
         ],
         "available_markets": [
             "AD",
             "AE",
             "AG",
+            "AL",
             "AM",
             "AO",
             "AR",
             "AT",
             "AU",
             "AZ",
+            "BA",
             "BB",
             "BD",
             "BE",
@@ -58,10 +61,13 @@
             "BS",
             "BT",
             "BW",
+            "BY",
             "BZ",
             "CA",
+            "CD",
             "CG",
             "CH",
+            "CI",
             "CL",
             "CM",
             "CO",
@@ -99,12 +105,14 @@
             "GY",
             "HK",
             "HN",
+            "HR",
             "HT",
             "HU",
             "ID",
             "IE",
             "IL",
             "IN",
+            "IQ",
             "IS",
             "IT",
             "JM",
@@ -124,15 +132,19 @@
             "LC",
             "LI",
             "LK",
+            "LR",
             "LS",
             "LT",
             "LU",
             "LV",
+            "LY",
             "MA",
             "MC",
             "MD",
+            "ME",
             "MG",
             "MH",
+            "MK",
             "ML",
             "MN",
             "MO",
@@ -166,6 +178,7 @@
             "PY",
             "QA",
             "RO",
+            "RS",
             "RW",
             "SA",
             "SB",
@@ -203,48 +216,50 @@
             "VN",
             "VU",
             "WS",
+            "XK",
             "ZA",
-            "ZM"
+            "ZM",
+            "ZW"
         ],
         "external_urls": {
-            "spotify": "https://open.spotify.com/album/5qfhZ5YkZ4LhEUbYgjrWt6"
+            "spotify": "https://open.spotify.com/album/7LkpnXXvh8x6EU4mRHgFQW"
         },
-        "href": "https://api.spotify.com/v1/albums/5qfhZ5YkZ4LhEUbYgjrWt6",
-        "id": "5qfhZ5YkZ4LhEUbYgjrWt6",
+        "href": "https://api.spotify.com/v1/albums/7LkpnXXvh8x6EU4mRHgFQW",
+        "id": "7LkpnXXvh8x6EU4mRHgFQW",
         "images": [
             {
                 "height": 640,
-                "url": "https://i.scdn.co/image/ab67616d0000b273617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d0000b27387ed3f989258e5a32212f08d",
                 "width": 640
             },
             {
                 "height": 300,
-                "url": "https://i.scdn.co/image/ab67616d00001e02617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d00001e0287ed3f989258e5a32212f08d",
                 "width": 300
             },
             {
                 "height": 64,
-                "url": "https://i.scdn.co/image/ab67616d00004851617c314e94693fad9a26f798",
+                "url": "https://i.scdn.co/image/ab67616d0000485187ed3f989258e5a32212f08d",
                 "width": 64
             }
         ],
-        "name": "Get You - Single",
-        "release_date": "2016-10-21",
+        "name": "Juicebox",
+        "release_date": "2019-08-16",
         "release_date_precision": "day",
-        "total_tracks": 2,
+        "total_tracks": 16,
         "type": "album",
-        "uri": "spotify:album:5qfhZ5YkZ4LhEUbYgjrWt6"
+        "uri": "spotify:album:7LkpnXXvh8x6EU4mRHgFQW"
     },
     "artists": [
         {
             "external_urls": {
-                "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+                "spotify": "https://open.spotify.com/artist/0fTav4sBLmYOAzKuJw0grL"
             },
-            "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-            "id": "20wkVLutqVOYrc0kxFs7rA",
-            "name": "Daniel Caesar",
+            "href": "https://api.spotify.com/v1/artists/0fTav4sBLmYOAzKuJw0grL",
+            "id": "0fTav4sBLmYOAzKuJw0grL",
+            "name": "Mac Ayres",
             "type": "artist",
-            "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+            "uri": "spotify:artist:0fTav4sBLmYOAzKuJw0grL"
         }
     ],
     "available_markets": [
@@ -327,9 +342,16 @@
         "JO",
         "PS",
         "IN",
+        "BY",
         "KZ",
         "MD",
         "UA",
+        "AL",
+        "BA",
+        "HR",
+        "ME",
+        "MK",
+        "RS",
         "SI",
         "KR",
         "BD",
@@ -361,6 +383,7 @@
         "JM",
         "KI",
         "LS",
+        "LR",
         "MW",
         "MV",
         "ML",
@@ -407,35 +430,41 @@
         "RW",
         "TG",
         "UZ",
+        "ZW",
         "BJ",
         "MG",
         "MU",
         "MZ",
         "AO",
+        "CI",
         "DJ",
         "ZM",
+        "CD",
         "CG",
+        "IQ",
+        "LY",
         "TJ",
         "VE",
-        "ET"
+        "ET",
+        "XC",
+        "XK"
     ],
     "disc_number": 1,
-    "duration_ms": 270846,
-    "explicit": true,
+    "duration_ms": 308825,
+    "explicit": false,
     "external_ids": {
-        "isrc": "TCACR1690007"
+        "isrc": "QZFZ61994693"
     },
     "external_urls": {
-        "spotify": "https://open.spotify.com/track/1boXOL0ua7N2iCOUVI1p9F"
+        "spotify": "https://open.spotify.com/track/5rlN7kWG5R7de0emQYkXaS"
     },
-    "href": "https://api.spotify.com/v1/tracks/1boXOL0ua7N2iCOUVI1p9F",
-    "id": "1boXOL0ua7N2iCOUVI1p9F",
+    "href": "https://api.spotify.com/v1/tracks/5rlN7kWG5R7de0emQYkXaS",
+    "id": "5rlN7kWG5R7de0emQYkXaS",
     "is_local": false,
-    "name": "Japanese Denim",
-    "popularity": 74,
-    "preview_url": "https://p.scdn.co/mp3-preview/ee5340b8b4f71426681b2a59a5118fd14ea19b4f?cid=c6ae676c7dbe41cc918d0af0bb9db221",
-    "track_number": 2,
+    "name": "Get Away",
+    "popularity": 44,
+    "preview_url": "https://p.scdn.co/mp3-preview/c922a4bf48229d813e43923f6c218852c2a05f20?cid=c6ae676c7dbe41cc918d0af0bb9db221",
+    "track_number": 5,
     "type": "track",
-    "uri": "spotify:track:1boXOL0ua7N2iCOUVI1p9F"
-
+    "uri": "spotify:track:5rlN7kWG5R7de0emQYkXaS"
 }

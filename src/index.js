@@ -1,10 +1,20 @@
+import { svg } from "d3";
 import { async } from "regenerator-runtime";
 import Example from "./scripts/example";
 import bestPart from "./scripts/songs/best_part.json";
+import japaneseDenim from "./scripts/songs/japanese_denim.json";
 
 /* const name require("string of name of library installed") when you're referencing from a node modular/external library (node_modules folder);
 Otherwise, if it's a relative file/other script files locally, then use import " " from ""
 */
+
+const data = [];
+const rowLabelsData = [
+    "Japanese Denim - Daniel Caesar", 
+    "Best Part - Daniel Caesar (feat. H.E.R)",
+    "So Strange - Polyphia (feat. Cuco)"
+]
+const columnLabelsData = ["Valence", "Danceability", "Energy", "Speechiness",]
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,50 +26,59 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     d3.selectAll('li:nth-child(even)')
-//         .style('color', 'red')
-//         .html('This is an even number')
-//         .classed('big', true); //this assigns that class to whatever elements we're selecting
-// });
+//these are params that I can use for my 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const numArray = [12,20,33,40,55,100, 101,103, 105];
-//     const li = d3.select('body').selectAll('.items li') //changing each li for the items class
-//         .data(numArray) //	Get the data array for the first group in the selection.
-//         .text(function(d) {
-//             return 'This is item number ' + d;
-//         })
 
-//     li.enter().append('li').text(function(d){
-//         return 'This is item number ' + d;
-//     });
 
-//     li.exit.remove();
 
-//     // d3.selectAll('.items li')
-//     //     .data(numArray)
-//     //     .style('font-size', function(d) {
-//     //         return d + 'px'
-//     //     })
-// })
+
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+    const params = {
+        svg: {
+            width: 800,
+            height: 800
+        },
+        margin: {
+            top: 20,
+            right: 20,
+            bottom: 200,
+            left: 200
+        },
+        plot: {
+            x: 10,
+            y: 10,
+            width: 500,
+            height: 500
+        }
+    };
+    let createSVG = function(id) {
+        let svg = d3.select("svg");
+        svg.attr("id", id);
+
+        let plot = svg.append("g");
+        plot.attr("id", "plot");
+        plot.attr("transform", `translate(${params.plot.x}, ${params.plot.y})`);
+
+        let rect = plot.append("rect");
+        rect.attr("id", "background");
+
+        rect.attr("x", 0);
+        rect.attr("y", 0);
+        rect.attr("width", params.plot.width);
+        rect.attr("height", params.plot.height);
+        
+        //returns an SVG for the notebook cell
+        return svg.node();
+
+
+    }
+
+    createSVG("heatmap");
+
+
+
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* CODE OF POSTMAN OAuth Tutorial = https://documenter.getpostman.com/view/1559645/Szzhcxzz#37132a43-9840-4ea1-ba49-0194803b53eb*/
 /* I am utilizing the Manual Header Method 
@@ -89,7 +108,6 @@ let clientId = "c6ae676c7dbe41cc918d0af0bb9db221";
 let clientSecret = "73757d0802ae4bbead3c43e5805e3a10";
 let stringToEncode = `${clientId}:${clientSecret}`;
 
-debugger;
 let rawStr = CryptoJS.enc.Utf8.parse(stringToEncode);
 let base64 = CryptoJS.enc.Base64.stringify(rawStr);
 let encodedIdAndKey = base64;
@@ -139,7 +157,7 @@ async function fetchData() {
 
 fetchData();
 
-debugger;
+
 
 
 //cors policy error

@@ -10,6 +10,18 @@
   font-size: 24px;
 }
 
+text {
+  font-size: 10px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+}
+
+line, path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
