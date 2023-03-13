@@ -47,6 +47,8 @@ class Data {
     }
 
     async fetchData(link) {
+        //**NOTE THAT FETCHACCESSTOKEN IS A INSTANCE METHOD OF DATA.
+        //**That's why you must add the this at the beginning of the method or else it will not work */
         const accessToken = await this.fetchAccessToken(); //return value of access_token
         
         
@@ -87,7 +89,8 @@ class Data {
                     fetch(`https://api.spotify.com/v1/audio-features/${trackId}`, apiRequestOptions)
                     .then(response => response.json())
                     .then(audioFeatures => new Track(trackInfo, audioFeatures))
-                }) //pass down track info into the this class)
+                }) //No need to create a InfoHolder class.
+                    //Can just fetch again and then at the end you can pass the trackInfo and audioFeatures into the Track instance
         }
     }
 
