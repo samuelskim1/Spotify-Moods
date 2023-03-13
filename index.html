@@ -5,30 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
+    <script src="https://d3js.org/d3.v6.js" charset="utf-8"></script>
     <script src="./dist/main.js"></script>
-    <script src="https://d3js.org/d3.v6.js"></script>
     <title>Spotify Moods</title>
 </head>
 
 <body>
-    <div id="main"></div>
-    <!-- <div id="Best_Part-Daniel_Caesar">
-        <h1> Best Part - Daniel Caesar</h1>
-        <ul id="audio_features">Audio Features</ul>
-    </div> -->
-    <div id="Japanese Denim - Daniel Caesar"></div>
-    <ul class="items">
-        <li>Danceability</li>
-        <li>Energy</li>
-        <li>Speechiness</li>
-        <li>Acousticness</li>
-        <li>Liveness</li>
-        <li>Valence</li>
-        <li>Instrumentalness</li>
+    <h1>Spotify Moods</h1>
+    <div id="App">
+        <form action="" id="link-form">
+            <label> Enter Spotify Link:
+                <input type="text" name="spotify-link" id="input">
+            </label>
 
-
-    </ul>
-    <svg></svg>
+            <input type="submit" value="Submit Link" id="submit-button">
+        </form>
+    </div>
 
 </body>
 
