@@ -1,80 +1,88 @@
+import { transform } from "@babel/core";
 import { svg } from "d3";
 import { async } from "regenerator-runtime";
-import Example from "./scripts/example";
 import bestPart from "./scripts/songs/best_part.json";
+import blue from "./scripts/songs/blue_kamal.json";
+import crazy from "./scripts/songs/crazy_ofa.json";
+import easily from "./scripts/songs/easily_bruno_major.json";
+import getAway from "./scripts/songs/get_away_mac_aryes.json";
+import iWonder from "./scripts/songs/i_wonder_kanye_west.json";
 import japaneseDenim from "./scripts/songs/japanese_denim.json";
+import soStrange from "./scripts/songs/so_strange_polyphia.json";
+import theOne from "./scripts/songs/the_one_sam_kim.json";
+import westside from "./scripts/songs/westside.json";
 
 /* const name require("string of name of library installed") when you're referencing from a node modular/external library (node_modules folder);
 Otherwise, if it's a relative file/other script files locally, then use import " " from ""
 */
 
-const data = [];
-const rowLabelsData = [
-    "Japanese Denim - Daniel Caesar", 
-    "Best Part - Daniel Caesar (feat. H.E.R)",
-    "So Strange - Polyphia (feat. Cuco)"
-]
-const columnLabelsData = ["Valence", "Danceability", "Energy", "Speechiness",]
+
+//set dimensions and margins of the graph
+const margin = { top: 30, right: 30, bottom: 30, left: 30 }
+const width = 450 - margin.left - margin.right;
+const height = 450 - margin.top - margin.bottom;
+
+const svg = d3.select("svg"); //selecting the element with the HTML tag "svg"
+svg.attr("id","myGraph"); //giving svg the attribute of id = "id arg"
+svg.attr("width", width + margin.left + margin.right)
+svg.attr("height", height + margin.top + margin.bottom)
+
+const plot = svg.append("g");
+plot.attr("id", "plot");
+plot.attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+//labels of row and columns
+const audioFeatures = [
+    "Valence", 
+    "Danceability", 
+    "Energy", 
+    "Instrumentalness", 
+    "Acousticness", 
+    "Liveness"
+];
+const songs = [
+    "Best Part (feat. H.E.R.)",
+    "blue", 
+    "CRAZY - Hidden Track No.V 11월 선정곡",
+    "Easily",
+    "Get Away",
+    "I Wonder",
+    "Japanese Denim",
+    "So Strange (feat. Cuco)",
+    "The One",
+    "WESTSIDE"
+];
+
+//Build x scales and axis:
+const x = d3.scaleBand()
+    .range([0, width])
+    .domain(audioFeatures)
+    .padding(0.01);
+
+svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x))
+
+//Build y scales and axis:
+const y = d3.scaleBand()
+    .range([ height, 0])
+    .domain(songs)
+    .padding(0.01);
+
+svg.append("g")
+    .call(d3.axisLeft(y));
+
+//Build color scale
+const myColor = d3.scaleLinear()
+    .range(["white", "#69b3a2"])
+    .domain([1,100])
+
+const data = []
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // console.log("Hello World")
-    const main = document.getElementById("main");
-    new Example(main);
-    const song = document.getElementById("Japanese Denim - Daniel Caesar");
-    song.innerHTML = `${("Japanese Denim - Daniel Caesar")}`
-    
-});
-
-//these are params that I can use for my 
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const params = {
-        svg: {
-            width: 800,
-            height: 800
-        },
-        margin: {
-            top: 20,
-            right: 20,
-            bottom: 200,
-            left: 200
-        },
-        plot: {
-            x: 10,
-            y: 10,
-            width: 500,
-            height: 500
-        }
-    };
-    let createSVG = function(id) {
-        let svg = d3.select("svg");
-        svg.attr("id", id);
-
-        let plot = svg.append("g");
-        plot.attr("id", "plot");
-        plot.attr("transform", `translate(${params.plot.x}, ${params.plot.y})`);
-
-        let rect = plot.append("rect");
-        rect.attr("id", "background");
-
-        rect.attr("x", 0);
-        rect.attr("y", 0);
-        rect.attr("width", params.plot.width);
-        rect.attr("height", params.plot.height);
+    svg.selectAll()
         
-        //returns an SVG for the notebook cell
-        return svg.node();
-
-
-    }
-
-    createSVG("heatmap");
 
 
 
