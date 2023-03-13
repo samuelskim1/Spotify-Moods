@@ -1,0 +1,98 @@
+{
+    "audio_features": {
+        "danceability": 0.772,
+        "energy": 0.256,
+        "key": 7,
+        "loudness": -8.545,
+        "mode": 0,
+        "speechiness": 0.0481,
+        "acousticness": 0.491,
+        "instrumentalness": 0.00612,
+        "liveness": 0.144,
+        "valence": 0.357,
+        "tempo": 118.902,
+        "type": "audio_features",
+        "id": "2k9N4caeCIJLOWwWwssrEM",
+        "uri": "spotify:track:2k9N4caeCIJLOWwWwssrEM",
+        "track_href": "https://api.spotify.com/v1/tracks/2k9N4caeCIJLOWwWwssrEM",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/2k9N4caeCIJLOWwWwssrEM",
+        "duration_ms": 210240,
+        "time_signature": 3
+    },
+    "album": {
+        "album_group": "album",
+        "album_type": "album",
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0hDjKSKjl1DC7ovYTDJHe8"
+                },
+                "href": "https://api.spotify.com/v1/artists/0hDjKSKjl1DC7ovYTDJHe8",
+                "id": "0hDjKSKjl1DC7ovYTDJHe8",
+                "name": "Bruno Major",
+                "type": "artist",
+                "uri": "spotify:artist:0hDjKSKjl1DC7ovYTDJHe8"
+            }
+        ],
+        "available_markets": [],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/album/5UFBJXQtytWA9vfaO2DxLx"
+        },
+        "href": "https://api.spotify.com/v1/albums/5UFBJXQtytWA9vfaO2DxLx",
+        "id": "5UFBJXQtytWA9vfaO2DxLx",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273e6dfaed2104e0512b7f22256",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02e6dfaed2104e0512b7f22256",
+                "width": 300
+            },
+            {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851e6dfaed2104e0512b7f22256",
+                "width": 64
+            }
+        ],
+        "name": "A Song For Every Moon",
+        "release_date": "2017-08-31",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:5UFBJXQtytWA9vfaO2DxLx"
+    },
+    "artists": [
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0hDjKSKjl1DC7ovYTDJHe8"
+            },
+            "href": "https://api.spotify.com/v1/artists/0hDjKSKjl1DC7ovYTDJHe8",
+            "id": "0hDjKSKjl1DC7ovYTDJHe8",
+            "name": "Bruno Major",
+            "type": "artist",
+            "uri": "spotify:artist:0hDjKSKjl1DC7ovYTDJHe8"
+        }
+    ],
+    "available_markets": [],
+    "disc_number": 1,
+    "duration_ms": 210240,
+    "explicit": false,
+    "external_ids": {
+        "isrc": "GBKPL1674673"
+    },
+    "external_urls": {
+        "spotify": "https://open.spotify.com/track/2k9N4caeCIJLOWwWwssrEM"
+    },
+    "href": "https://api.spotify.com/v1/tracks/2k9N4caeCIJLOWwWwssrEM",
+    "id": "2k9N4caeCIJLOWwWwssrEM",
+    "is_local": false,
+    "name": "Easily",
+    "popularity": 23,
+    "preview_url": null,
+    "track_number": 4,
+    "type": "track",
+    "uri": "spotify:track:2k9N4caeCIJLOWwWwssrEM"
+}

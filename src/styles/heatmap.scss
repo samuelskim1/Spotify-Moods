@@ -1,0 +1,11 @@
+text {
+    font-size: 10px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+}
+
+line, path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
