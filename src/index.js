@@ -1,15 +1,5 @@
 import App from "./scripts/app.js";
-import bestPart from "./scripts/songs/best_part.json";
-import blue from "./scripts/songs/blue_kamal.json";
-import crazy from "./scripts/songs/crazy_ofa.json";
-import easily from "./scripts/songs/easily_bruno_major.json";
-import getAway from "./scripts/songs/get_away_mac_aryes.json";
-import iWonder from "./scripts/songs/i_wonder_kanye_west.json";
-import japaneseDenim from "./scripts/songs/japanese_denim.json";
-import soStrange from "./scripts/songs/so_strange_polyphia.json";
-import theOne from "./scripts/songs/the_one_sam_kim.json";
-import westside from "./scripts/songs/westside.json";
-
+import RadarChart from "./scripts/radarChart"
 /* const name require("string of name of library installed") when you're referencing from a node modular/external library (node_modules folder);
 Otherwise, if it's a relative file/other script files locally, then use import " " from ""
 */
@@ -27,13 +17,52 @@ document.addEventListener("DOMContentLoaded", () => {
     const myApp = document.getElementById("App");
     new App(myApp);
 
-    //just create a new app
-    //inside that app class, we can have a function fetch data
-        //in the constructor of that function 
-    //put fetch inside here
-    //.then(create instnace of the app)
-    //inside of the app we'll filter data and create an instance of a spider chart passing in that filtered data
-    //could also create an individual data class to handle all of that data manipulation
+    const data = [
+        [//"Japanese Denim - Daniel Caesar"
+            { axis: "Valence", value: 0.345 },
+            { axis: "Danceability", value: 0.707 },
+            { axis: "Energy", value: 0.238 },
+            { axis: "Instrumentalness", value: 0.00000242 },
+            { axis: "Acousticness", value: 0.0905 },
+            { axis: "Liveness", value: 0.842 },
+            { axis: "Speechiness", value: 0.0379 }
+        ], [//"So Strange - Polyphia (feat. Cuco)"
+            { axis: "Valence", value: 0.484 },
+            { axis: "Danceability", value: 0.553 },
+            { axis: "Energy", value: 0.885 },
+            { axis: "Instrumentalness", value: 0.00072 },
+            { axis: "Acousticness", value: 0.000667 },
+            { axis: "Liveness", value: 0.209 },
+            { axis: "Speechiness", value: 0.0385 }
+        ], [//"Get Away - Mac Ayres"
+            { axis: "Valence", value: 0.322 },
+            { axis: "Danceability", value: 0.676 },
+            { axis: "Energy", value: 0.672 },
+            { axis: "Instrumentalness", value: 0.0000367 },
+            { axis: "Acousticness", value: 0.287 },
+            { axis: "Liveness", value: 0.103 },
+            { axis: "Speechiness", value: 0.07 }
+        ]
+    ];
+
+    const margin = { top: 100, right: 100, bottom: 100, left: 100 };
+    const width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right;
+    const height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+
+    const color = d3.scaleOrdinal(d3.schemeCategory10)
+        .range(["#EDC951", "#CC333F", "#00A0B0"]);
+
+    const radarChartOptions = {
+        w: width,
+        h: height,
+        margin: margin,
+        maxValue: 0.5,
+        levels: 5,
+        roundStrokes: true,
+        color: color
+    };
+
+    RadarChart(".radarChart", data, radarChartOptions);
 })
 
 
