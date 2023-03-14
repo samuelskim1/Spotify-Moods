@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const songs =[
             // Name: "Japanese Denim - Daniel Caesar",
             
-            {Valence: 0.345},
-            {Danceability: 0.707},
-            {Energy: 0.238},
-            {Instrumentalness: 0.00000242},
-            {Acousticness: 0.0905},
-            {Liveness: 0.842},
-            {Speechiness: 0.0379}
+            ["Valence", 0.345],
+            ["Danceability", 0.707],
+            ["Energy", 0.238],
+            ["Instrumentalness", 0.00000242],
+            ["Acousticness", 0.0905],
+            ["Liveness", 0.842],
+            ["Speechiness", 0.0379]
         // {
         //     // Name: "So Strange - Polyphia (feat. Cuco)",
         //     Valence: 0.484 ,
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //     .append('p') //adds DOM nodes for the missing elements
     //     .text(d => d.Name);
 
-    const xScale = d3.scaleBand().domain(songs.map(dataPoint => dataPoint.Valence)).rangeRound([0, 250]).padding(0.1);
+    const xScale = d3.scaleBand().domain(songs.map(dataPoint => dataPoint[1])).rangeRound([0, 250]).padding(0.1);
     const yScale = d3.scaleLinear().domain([0, 1]).range([200, 0]);
 
     const container = d3.select('.barGraph')
@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
         .append('rect') //valid svg element that we can use inside of an SVG NODE
         .classed('bar', true)
         .attr('width', xScale.bandwidth()) //sets the width of the element 
-        .attr('height', (data) => 200 - yScale(data.value))
-        .attr('x', data => xScale(data.value))
-        .attr('y', data => yScale(data.value))
+        .attr('height', (data) => 200 - yScale(data[1]))
+        .attr('x', data => xScale(data[1]))
+        .attr('y', data => yScale(data[1]))
             
          //can pass in a variable/function that has access to the div
 })
