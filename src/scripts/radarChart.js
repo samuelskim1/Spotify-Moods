@@ -2,7 +2,7 @@ import { formatPrefix } from "d3";
 
 import { FormatSpecifier } from "d3";
 
-function RadarChart(id, data, options) {
+function radarChart(id, data, options) {
     const circle = {
         w: 600, 
         h: 600,

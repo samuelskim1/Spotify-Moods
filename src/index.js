@@ -1,5 +1,5 @@
 import App from "./scripts/app.js";
-import RadarChart from "./scripts/radarChart"
+import radarChart from "./scripts/radarChart"
 /* const name require("string of name of library installed") when you're referencing from a node modular/external library (node_modules folder);
 Otherwise, if it's a relative file/other script files locally, then use import " " from ""
 */
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         color: color
     };
 
-    RadarChart(".radarChart", data, radarChartOptions);
+    radarChart(".radarChart", data, radarChartOptions);
 })
 
 
