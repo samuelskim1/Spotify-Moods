@@ -3,24 +3,24 @@ import Data from "./data";
 class App {
     constructor(ele) {
         this.ele = ele
-
-        // this.ele = ele
-        // this.ele.innerHTML = "<h1>This is the App</h1>"
-        
-        //inside here render plot
-        //render 
         const data = new Data();
         const button = document.getElementById("submit-button"); //grabbing the submit button
 
         //adding a click listener on button
         button.addEventListener("click", async function (event) {
-            //grabbing the input for the 
             const spotifyInput = document.getElementById("input").value;
-            console.log(spotifyInput);
             //prevent the default behavior of the button/form from going through;
             event.preventDefault();
             //invoke the fetchData method on the link that we passed into the input field'
-            await data.fetchData(spotifyInput); 
+            const fetching = await data.fetchData(spotifyInput); 
+            new BarChart(fetching)
+                //in my barChart class, I would input the data class
+                //CHANGE all the fetching methods into class methods (so i dont have to createa  new instance every time)
+                //handle my rendering in this barchart
+                    //inside constructor
+
+                //d3 stuff will happen in the render method of barChart
+                    //that render method will take in the finalized data of the track itself
         })
     }
 

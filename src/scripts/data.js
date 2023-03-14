@@ -7,7 +7,7 @@ const CryptoJS = require("crypto-js");
 
 class Data {
     constructor () {
-
+        
     }
     //should fetchAccessToken only when we first open the page/refresh the page/every hour
 

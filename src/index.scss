@@ -1,8 +1,16 @@
 @import "./styles/heatmap.scss";
 @import "./styles/css_reset.scss";
-@import "./styles/spiderChart.scss";
 
+.container {
+    width: 250px;
+    height: 200px;
+    border: 1px solid #720570;
+}
 
+.bar {
+    fill: #720570; //how we add background color to svg elements
+    
+}
 
 
 
