@@ -17,41 +17,35 @@ class Track {
         this.loudness = audioFeatures["loudness"];
         this.tempo = audioFeatures["tempo"];
     }
-}
-    //_ represents " "
-    //1 reprsents
-    // filteredData() {
-    //     data = [ 
-    //         Japanese_Denim_1_Daniel_Caesar : {
-    //         Name: "Japanese Denim - Daniel Caesar"
-    //         Valence: 0.345 ,
-    //         Danceability: 0.707,
-    //         Energy: 0.238,
-    //         Instrumentalness: 0.00000242 ,
-    //         Acousticness: 0.0905 ,
-    //         Liveness: 0.842, 
-    //         Speechiness: 0.0379 
-    //         }, 
-    //         So_Strange_1_Polyphia: {
-    //             Valence: 0.484 ,
-    //             Danceability: 0.553 ,
-    //             Energy: 0.885 ,
-    //             Instrumentalness: 0.00072 ,
-    //             Acousticness: 0.000667 ,
-    //             Liveness: 0.209,
-    //             Speechiness: 0.0385 
-    //         },
-    //         Get_Away_!_Mac_Ayres:{
 
-    //         }
-    //             Valence: 0.322 ,
-    //             Danceability: 0.676 ,
-    //             Energy: 0.672 ,
-    //         Instrumentalness: 0.0000367 ,
-    //             Acousticness: 0.287 ,
-    //             Liveness: 0.103 
-    //         Speechiness: 0.07 
-    //     ]   
-    // }
+
+    //graph needs:
+        //a title that has both the song title and artist
+        //An array with subarrays of the following
+            //valence, danceability, energy, acousticness, liveness, speechiness
+
+    filteredAudioFeatures () {
+        const array = [
+            ["Valence", this.valence],
+            ["Danceability", this.danceability],
+            ["Energy", this.energy],
+            ["Acousticness", this.acousticness],
+            ["Liveness", this.liveness],
+            ["Speechiness", this.speechiness]
+        ];
+
+        console.log("audiofeatures have been filtered")
+        return array;
+    }
+
+    filteredTrackInfo () {
+        const axisTitle = `${this.name}` + ' - ' + `${this.artist}`
+        console.log("trackinfo has been filtered")
+        return axisTitle
+    }
+
+}
+
+
 
 export default Track;

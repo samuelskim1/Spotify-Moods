@@ -11,23 +11,91 @@
 </head>
 
 <body>
-    <div id="MastHead">
+    <div class="sidebar"> 
         <img src="https://static.vecteezy.com/system/resources/previews/018/930/579/original/spotify-app-logo-spotify-icon-transparent-free-png.png">
-        <h1 class="Title" id="AppName">Spotify Moods
-    </h1>
+        <h1 class="descriptions-header">Audio Feature Descriptions</h1>
+        
+        <button class="accordion">Valence</button>
+        <div class="panel">
+            <p>
+                A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more
+                positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed,
+                angry).
+            </p>
+        </div>
+    
+        <button class="accordion">Danceability</button>
+        <div class="panel">
+            <p>
+                Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo,
+                rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.
+            </p>
+        </div>
+    
+        <button class="accordion">Energy</button>
+        <div class="panel">
+            <p>
+                Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic
+                tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the
+                scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate,
+                and general entropy.
+            </p>
+        </div>
+    
+        <button class="accordion">Acousticness</button>
+        <div class="panel">
+            <p>
+            A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is
+            acoustic.
+            </p>
+        </div>
+    
+        <button class="accordion">Liveness</button>
+        <div class="panel">
+            <p>
+                Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the
+                track was performed live. A value above 0.8 provides strong likelihood that the track is live.
+            </p>
+        </div>
+    
+        <button class="accordion">Speechiness</button>
+        <div class="panel">
+            <p>
+                Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk
+                show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably
+                made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech,
+                either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and
+                other non-speech-like tracks.
+            </p>
+        </div>
+    
     </div>
-    <div id="App">
-        <form action="" id="link-form">
-            <label for="input"> Enter Spotify Track Link</label>
-            <input type="text" name="spotify-link" id="input" placeholder="Link...">
-            <input type="submit" value="Submit Link" id="submit-button">
-        </form>
+    <header>
+        <nav id="header-nav">
+            <h1 class="header-image">
+            </h1>
+            <ul></ul>
+            <h1 class="Title" id="AppName">Spotify Moods
+            </nav>
+     </header>
+        
+
+
+    
+    <div class="main">
+        <div id="App">
+            <form action="" id="link-form">
+                <label for="input"> Enter Spotify Track Link</label>
+                <input type="text" name="spotify-link" id="input" placeholder="Link...">
+                <input type="submit" value="Submit Link" id="submit-button">
+            </form>
+        </div>
+
+        <div id="dviz">
+
     </div>
 
-    <div id="dviz">
-
     </div>
-
 </body>
 
 </html>

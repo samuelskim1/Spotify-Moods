@@ -12,8 +12,8 @@ class App {
             //prevent the default behavior of the button/form from going through;
             event.preventDefault();
             //invoke the fetchData method on the link that we passed into the input field'
-            const fetching = await data.fetchData(spotifyInput); 
-            new BarChart(fetching)
+            /*const fetching =*/ await data.fetchData(spotifyInput); 
+            // new BarChart(fetching)
                 //in my barChart class, I would input the data class
                 //CHANGE all the fetching methods into class methods (so i dont have to createa  new instance every time)
                 //handle my rendering in this barchart

@@ -1,8 +1,29 @@
+import BarGraph from "./barGraph";
 import PlaylistInfoHolder from "./playlistInfoHolder";
 import Track from "./track"
 
 const CryptoJS = require("crypto-js");
 
+
+
+/* CODE OF POSTMAN OAuth Tutorial = https://documenter.getpostman.com/view/1559645/Szzhcxzz#37132a43-9840-4ea1-ba49-0194803b53eb*/
+/* I am utilizing the Manual Header Method 
+*/
+
+/* I have creating the encodedIDandKey that will be used in the Auth Header
+    -I installed crypto-js to obtain the JS library
+    -CryptoJs involves practice of encrypting and decrypting information to ensure it is kept private/secure from unintended parties
+    -I must require from "crypto-js" in my node_modules folder
+    -I am base 64 encoding client ID and client secret key;
+
+*/
+/* 
+URLSearchParams is a interface of URL API 
+- Defines utility methods to work with the query string of a URL.
+- Constructor returns a URLSearchParams object instance
+- EX can append/delete key/value pairs
+- Can also iterate through this by using for loops
+*/
 
 
 class Data {
@@ -50,10 +71,6 @@ class Data {
         //**NOTE THAT FETCHACCESSTOKEN IS A INSTANCE METHOD OF DATA.
         //**That's why you must add the this at the beginning of the method or else it will not work */
         const accessToken = await this.fetchAccessToken(); //return value of access_token
-        
-        
-        // const link = document.getElementById('input').value; //get value of the input of the form
-        // console.log("Got link");
         console.log(link);
 
         const apiRequestOptions = {
@@ -76,6 +93,8 @@ class Data {
             fetch(`https://api.spotify.com/v1/playlists/${playlistId}`, apiRequestOptions)
                 .then(response => response.json())
                 .then(data => new PlaylistInfoHolder(data, apiRequestOptions)) //pass down playlist info into this class
+
+
         } else if (link.includes("track")) {
             console.log("this is a track link");
 
@@ -83,12 +102,21 @@ class Data {
             const trackUri = trackUrlParts[1];
             const trackId = trackUri.split("?")[0];
 
+           
             fetch(`https://api.spotify.com/v1/tracks/${trackId}`, apiRequestOptions)
                 .then(response => response.json())
                 .then(trackInfo => {
                     fetch(`https://api.spotify.com/v1/audio-features/${trackId}`, apiRequestOptions)
                     .then(response => response.json())
-                    .then(audioFeatures => new Track(trackInfo, audioFeatures))
+                    .then(audioFeatures => {
+        
+                        const track = new Track(trackInfo, audioFeatures);
+                        console.log("new track has been created")
+                        const barGraph = new BarGraph(track.filteredAudioFeatures(), track.filteredTrackInfo());
+                        console.log("new barGraph has been created")
+                        barGraph.renderGraph();
+                        ("barGraph has been rendered")
+                    })
                 }) //No need to create a InfoHolder class.
                     //Can just fetch again and then at the end you can pass the trackInfo and audioFeatures into the Track instance
         }

@@ -1,20 +1,104 @@
 @import "./styles/heatmap.scss";
 @import "./styles/css_reset.scss";
 
-#MastHead {
-    display: flex;
-    justify-content: space-between;
+.sidebar{
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left: 0;
+    // background: rgb(2, 0, 36);
+    //     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    // background: rgb(2, 0, 36);
+    //     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    // background: rgb(2, 0, 36);
+    //     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: rgb(2, 0, 36);
+        background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 
 }
 
+header {
+    margin-left: 15%;
+}
+
+#AppName {
+    color: white;
+}
+
+
+.main {
+    margin-left:15%;
+}
+
 img {
-    height: 200px;
-    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.descriptions-header {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+
+
+.accordion {
+    text-align: center;
+    background-color: #605f5f;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    // outline:#ec1c1c;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: rgb(69, 69, 69)
+}
+
+.panel {
+    padding: 18px 18px;
+    background-color: rgb(52, 51, 51);
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    max-height: 0;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    
+    
+}
+
+#header-nav {
+    // position: fixed;
+    // z-index: 2;
+}
+
+img {
+    height: 100px;
+    width: 100px;
     // background: linear-gradient(0deg, rgba(249, 252, 69, 1) 100%);
     // background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
 }
 
 body {
+    min-height: 100vh ;
+    width: 100%;
 
     background-color: #983275;
         background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
@@ -25,30 +109,74 @@ body {
 }
 #dviz {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin: 40px;
 }
 
 #AppName {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
-    font-size: 32;
+    font-size: 42;
     padding: 70px 0;
     text-align: center;
-    color: #000000;
+    color: white;
 }
 
 #link-form{
     display: flex;
-    justify-content: center;
-    // flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
 }
 
 #link-form > label{
     font-family: 'Roboto Mono', monospace;
-    color: #000000
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    // display:flex;
+    justify-content: center;
+    
+}
+
+input::placeholder {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+
+}
+
+#input {
+    border-color: white;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
 }
 
 #submit-button {
     width: 100px;
+    height: 30px;
     font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color: rgb(181, 49, 49);
+    border-radius: 15px;
+    border-color: white;
 }
+
+.axis {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    color: white
+}
+
+.axis {
+    color:white;
+}
+// #yTitle {
+//     font-size: 30;
+// }
+
