@@ -42,29 +42,89 @@ document.addEventListener("DOMContentLoaded", () => {
         // }
     ]
 
-    // d3.select('.barGraph') //selects an HTML element
-    //     .selectAll('p')
-    //     .data(data) //binds element in previous select to this data
-    //     .enter() //accounts for any missing elements
-    //     .append('p') //adds DOM nodes for the missing elements
-    //     .text(d => d.Name);
+    //creating margins and dimensions
+    const margin = {top: 60, right: 60, bottom: 100, left: 80},
+            width = 600 - margin.left - margin.right,
+            height = 550 - margin.top - margin.bottom;
+    
 
-    const xScale = d3.scaleBand().domain(songs.map(dataPoint => dataPoint[1])).rangeRound([0, 250]).padding(0.1);
-    const yScale = d3.scaleLinear().domain([0, 1]).range([200, 0]);
-
-    const container = d3.select('.barGraph')
+    //creating svg and the graph elements
+    const svg = d3.select('#dviz')
         .classed('container', true)//adding a class, boolean determines whether the class should be added/not
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform",
+                  `translate(${margin.left}, ${margin.top})`
+            );
 
-    const bars = container
+
+
+
+    //X axis
+    const xScale = d3.scaleBand()
+                        .domain(songs.map(dataPoint => dataPoint[1]))
+                        .rangeRound([0, width])
+                        .padding(0.5);
+    svg.append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(xScale))
+        .selectAll("text")
+            .attr("transform", "translate(-10, 0)rotate(-45)")
+            .style("text-anchor", "end")
+
+    const xTitle = svg.append("text")
+        .classed("title", true)
+        .attr('id', "xTitle")
+        .attr("font-family", "Roboto Mono", "monospace")
+        .attr("font-size", 20)
+        .attr("font-weight", 500)
+        .attr("text-anchor", "middle")
+        .attr("x", width/2)
+        .attr("y", height + 80)
+        .text("Audio Features")
+
+    // svg.call(xTitle);
+
+    //Y axis
+    const yScale = d3.scaleLinear()
+                        .domain([0, 1])
+                        .range([height, 0]);
+
+    svg.append("g")
+        .call(d3.axisLeft(yScale));
+
+    const yTitle = svg.append("text")
+        .classed("title", true)
+        .attr('id', "yTitle")
+        .attr("font-family", "Roboto Mono", "monospace")
+        .attr("font-size", 20)
+        .attr("font-weight", 500)
+        .attr("text-anchor", "middle")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -20)
+        .attr("dy", "-3em")
+        .attr("x", -height/2)
+
+        .text("Value/Confidence Level");
+
+    // svg.call(yTitle);
+
+
+    const bars = svg
         .selectAll('.bar')
         .data(songs)
         .enter()
         .append('rect') //valid svg element that we can use inside of an SVG NODE
-        .classed('bar', true)
-        .attr('width', xScale.bandwidth()) //sets the width of the element 
-        .attr('height', (data) => 200 - yScale(data[1]))
-        .attr('x', data => xScale(data[1]))
-        .attr('y', data => yScale(data[1]))
+            .classed('bar', true)
+            .attr('width', xScale.bandwidth()) //sets the width of the element 
+            .attr('height', (data) => height - yScale(data[1]))
+            .attr('x', data => xScale(data[1]))
+            .attr('y', data => yScale(data[1]))
+        .attr("fill", "#26b94d")
+        .style("stroke", 'black')
+        .attr("stroke-linecap", "round")
             
          //can pass in a variable/function that has access to the div
 })

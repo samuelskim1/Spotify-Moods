@@ -1,16 +1,54 @@
 @import "./styles/heatmap.scss";
 @import "./styles/css_reset.scss";
 
-.container {
-    width: 250px;
+#MastHead {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+img {
     height: 200px;
-    border: 1px solid #720570;
+    width: 200px;
+    // background: linear-gradient(0deg, rgba(249, 252, 69, 1) 100%);
+    // background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
 }
 
-.bar {
-    fill: #720570; //how we add background color to svg elements
-    
+body {
+
+    background-color: #983275;
+        background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
+    // background-color: #2b1d42;
+    //     background-image: linear-gradient(0deg, #2b1d42 0%, #4a2f48 25%, #8f3d4b 49%, #f3b88d 75%, #fceccb 100%);
+    // background: rgb(61, 58, 180);
+    //     background: linear-gradient(0deg, rgba(61, 58, 180, 1) 0%, rgba(253, 72, 29, 1) 50%, rgba(249, 252, 69, 1) 100%);
+}
+#dviz {
+    display: flex;
+    justify-content: center;
 }
 
+#AppName {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 32;
+    padding: 70px 0;
+    text-align: center;
+    color: #000000;
+}
 
+#link-form{
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+}
 
+#link-form > label{
+    font-family: 'Roboto Mono', monospace;
+    color: #000000
+}
+
+#submit-button {
+    width: 100px;
+    font-family: 'Roboto Mono', monospace;
+}
