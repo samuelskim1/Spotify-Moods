@@ -9,8 +9,8 @@ class BarGraph {
 
         //creating margins and dimensions
         const margin = { top: 60, right: 60, bottom: 100, left: 80 },
-            width = 600 - margin.left - margin.right,
-            height = 550 - margin.top - margin.bottom;
+            width = 550 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
 
 
         //creating svg and the graph elements

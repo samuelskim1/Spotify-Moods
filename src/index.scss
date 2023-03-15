@@ -99,7 +99,7 @@ img {
 body {
     min-height: 100vh ;
     width: 100%;
-
+    display: flex;
     background-color: #983275;
         background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
     // background-color: #2b1d42;
