@@ -11,8 +11,6 @@ Spotify's API allows developers to view extra various audio features of a song. 
 
 - Danceability
    -Describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity
-- Instrumentalness
-   -Predicts whether a track contains no vocals.
 - Valence
    -A measure describing the musical positiveness conveyed by a track
 - Energy
@@ -32,10 +30,11 @@ Thie project will display the value of these features for a song on multiple gra
 ## Functionality & MVPs ##
 
 With this project, users will be able to: 
-- Render analysis/analytics for song(s)
+-Implementing Client Credientials Flow and properly fetching from Spotify's API
+-Render a graph of audio features for a track by simply submitting a spotify link
+-View definitions for the audio features. 
+-Implement ways to select between different graphs. 
 - Select between which songs they would like to be displayed
-  - When selecting a singular song, they will be able to see data visualizations some of these categories in specific sections of a song
-- View the differences between the songs when selecting all the songs to be displayed as they are rendered on top of each other
 
 In addition, this project will include:
 - An About model describing the background of these specific features and what they represent
@@ -47,43 +46,35 @@ In addition, this project will include:
 
 
 - Nav links include links to this project's Github repo, my LinkedIn, and the About modal
-- The Song Selector will allow the user to add/remove the graph of a song in the list of songs provided
-- On the right underneath the controls, there will be an Avatar that will perform certain animations that represent the overall mood based off the average of audio feature values
 - On the left:
-   - there will be a dropdown for each song that contains the description/blurb the artist provided
-      - Implement this using a carousel(JS) (BONUS)
-   - there will be a list of non-graphical audio features such as the key, time-signature, tempo, and the duration of songs
-      - Implement this using a carousel(JS) or another suitable animation (BONUS)
-   - there will a description of every audio feature displayed in this project
-      - Implement this using a carousel(JS) (BONUS)
+   - there will be a sidebar with a description for each audio feature
+      - Implement this using a accordian (BONUS)
 
-- Controls will start off by having a reset button which will clear the main graph
-   - It will have a Show/Hide Avatar (the Person Icon) Option (BONUS)
-   - It will have a play song button (BONUS)
-   
 ## Technologies, Libraries, APIs ##
 
 This project will be implemented with the following technologies:
-- The D3 and CANVAS API to create graphs and shapes that dynamically presents the data from the Spotify API
-- Webpack to bundle and transpile the source JavaScript code
--npm to manage project dependencies
+- The D3 Library to create graphs and shapes that dynamically presents the data from the Spotify API
+-Webpack to bundle and transpile the source JavaScript code
+-Npm to manage project dependencies
 
 ## Implementation Timeline ##
 
-- **Friday Afternoon & Weekend**: Finish researching the D3/Canvas library and figure out which type of graph will best represent my main graph. Finish setting up project, including getting webpack up and running. Implement logic to display the audio features of a singular song in the main graph. Spend time to really get comfortable with the D3 and Canvas API.
+- **Friday Afternoon & Weekend**: Researched how to pull from Spotify's API through Client Credentials Authorization Flow (Does not require User Login). Began researching D3's Library as a whole. Took a look at different examples presented to figure out the best way to implement my data.
 
-- **Monday**: Implement logic to display the audio features of certain segments of that singular song in the graphs. Implement logic to only display the graphs of segments of songs that selected. Begin to start implementing the logic for retrieving/displaying multiple songs on the main graph.
+- **Monday**: Implemented logic to dynamically fetching the audio features of a track from a singular Spotify Link. 
 
-- **Tuesday**: Implement Song Selector functionality. Implement logic to display the description of songs by artists, brief definition of audio features, non-graphical audio feature of songs. Start styling up these displays
+- **Tuesday**: Researched and generated a bar graph to represent the audio features of a track from the Spotify Link that was passed in. Started to style the page as a whole.
 
-- **Wednesday**: Finish implementing user controls. Fix up and go all out on styling/different color schemes. If I have extra time, I will start on bonus features. 
 
-- **Thursday Morning**: Deploy to GitHub pages. If time, rewrite this proposal as a production README.
+- **Wednesday**: Implemented my sidebar with the descriptions of the audio features and my Nav Bar.
+
+- **Thursday Morning**: Deployed to GitHub pages.
 
 ## Bonus features ##
 There are many directions that this projects could eventually go. Some anticipated updates are:
-- Implementing carousels for all of the description displays 
-- Implement an avatar that performs animations based of the overall mood of the songs
-- Implement the ability to add songs and user playlists
+- Implemnting the search bar to take in multiple tracks at once and handle playlist links
+- Once the number of graphs exceeds a certain point, create a heatmap to better display larger sample sizes
+- Implementing an accordian for all of the audio feature descriptions
+- Implement a way to select between what tracks to display
 
  
