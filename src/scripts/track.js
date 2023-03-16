@@ -1,6 +1,6 @@
 class Track {
     constructor(trackInfo, audioFeatures) {
-        console.log(trackInfo,audioFeatures);
+
         this.name = trackInfo["name"];
         let obj = trackInfo.artists[0];
         this.artist = obj["name"];
@@ -18,12 +18,6 @@ class Track {
         this.tempo = audioFeatures["tempo"];
     }
 
-
-    //graph needs:
-        //a title that has both the song title and artist
-        //An array with subarrays of the following
-            //valence, danceability, energy, acousticness, liveness, speechiness
-
     filteredAudioFeatures () {
         const array = [
             ["Valence", this.valence],
@@ -33,15 +27,12 @@ class Track {
             ["Liveness", this.liveness],
             ["Speechiness", this.speechiness]
         ];
-
-        console.log("audiofeatures have been filtered")
         return array;
     }
 
     filteredTrackInfo () {
-        const axisTitle = `${this.name}` + ' - ' + `${this.artist}`
-        console.log("trackinfo has been filtered")
-        return axisTitle
+        const axisTitle = `${this.name}` + ' - ' + `${this.artist}`;
+        return axisTitle;
     }
 
 }

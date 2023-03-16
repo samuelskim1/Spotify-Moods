@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     displayModalAtStart();
+    
 
     const myApp = document.getElementById("App");
     const newApp = new App(myApp);

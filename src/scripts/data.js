@@ -1,5 +1,5 @@
 import BarGraph from "./barGraph";
-import PlaylistInfoHolder from "./playlistInfoHolder";
+import Playlist from "./playlist";
 import Track from "./track"
 
 const CryptoJS = require("crypto-js");
@@ -57,10 +57,7 @@ class Data {
 
         try {
             const response = await fetch("https://accounts.spotify.com/api/token", requestOptions);
-            console.log('fetch made')
             const token = await response.json();
-            console.log('token made into a JS object')
-            console.log(token.access_token);
             return token.access_token;
         } catch (error) {
             console.log(error);
@@ -68,10 +65,8 @@ class Data {
     }
 
     async fetchData(link) {
-        //**NOTE THAT FETCHACCESSTOKEN IS A INSTANCE METHOD OF DATA.
-        //**That's why you must add the this at the beginning of the method or else it will not work */
-        const accessToken = await this.fetchAccessToken(); //return value of access_token
-        console.log(link);
+
+        const accessToken = await this.fetchAccessToken(); 
 
         const apiRequestOptions = {
             method: 'GET',
@@ -83,42 +78,31 @@ class Data {
         };
 
         if (link.includes("playlist")) {
-            console.log("this is a playlist link");
-
-
             const playlistUrlParts = link.split("playlist/")
             const playlistUri = playlistUrlParts[1];
             const playlistId = playlistUri.split("?")[0];
             
             fetch(`https://api.spotify.com/v1/playlists/${playlistId}`, apiRequestOptions)
                 .then(response => response.json())
-                .then(data => new PlaylistInfoHolder(data, apiRequestOptions)) //pass down playlist info into this class
-
+                .then(data => new Playlist(data, apiRequestOptions)) 
 
         } else if (link.includes("track")) {
-            console.log("this is a track link");
-
             const trackUrlParts = link.split("track/")
             const trackUri = trackUrlParts[1];
             const trackId = trackUri.split("?")[0];
 
-           
+            
             fetch(`https://api.spotify.com/v1/tracks/${trackId}`, apiRequestOptions)
                 .then(response => response.json())
                 .then(trackInfo => {
                     fetch(`https://api.spotify.com/v1/audio-features/${trackId}`, apiRequestOptions)
                     .then(response => response.json())
                     .then(audioFeatures => {
-        
                         const track = new Track(trackInfo, audioFeatures);
-                        console.log("new track has been created")
                         const barGraph = new BarGraph(track.filteredAudioFeatures(), track.filteredTrackInfo());
-                        console.log("new barGraph has been created")
                         barGraph.renderGraph();
-                        ("barGraph has been rendered")
                     })
-                }) //No need to create a InfoHolder class.
-                    //Can just fetch again and then at the end you can pass the trackInfo and audioFeatures into the Track instance
+                }) 
         }
     }
 

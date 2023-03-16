@@ -103,10 +103,29 @@ class BarGraph {
             .style('font-size', "20px")
             .style('font-weight', "500")
             .style("text-decoration", "underline")
-
-            
             .text(`${this.trackInfo}`)
-            
+        
+        // const tooltip = d3.select("#dviz")
+        //     .append("div")
+        //     .style("opacity", 0)
+        //     .attr("class", "tooltip")
+        //     .style("background-color", "white")
+        //     .style("border", "solid")
+        //     .style("border-width", "1px")
+        //     .style("border-radius", "5px")
+        //     .style("padding", "10px")    
+
+        // const mouseover = function() {
+        //     tooltip.style("opacity", 1)
+        // }
+
+        // const mousemove = function(event, d) {
+        //     tooltip
+        //         .html(`Exact Value: ${d[1]}`)
+        //         .style("left" , `${d3.(this)})
+        // }
+
+
         const bars = svg
             .selectAll('.bar')
             .data(this.audioFeatures)
