@@ -7,10 +7,48 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="https://d3js.org/d3.v6.js" charset="utf-8"></script>
     <script src="./dist/main.js"></script>
+    <script src="https://kit.fontawesome.com/eab53237b7.js" crossorigin="anonymous"></script>
     <title>Spotify Moods</title>
 </head>
 
+<header>
+        <nav id="navbar">
+            <a href="https://github.com/samuelskim1"><i class="fa-brands fa-github"></i> Github</a>
+            <a href="https://www.linkedin.com/in/samuel-kim-3b4935206/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <button id="modal-button">About/Instructions</button>
+        </nav>
+    <h1 class="Title" id="AppName">Spotify Moods </h1>
+</header>
+
 <body>
+
+    <!-- modal -->
+    <div id="modal">
+        <div id="modal-content">
+            <span class="close">&times;</span>
+            <p>
+               About
+               <br>
+               <br>
+               This is a data visualization of some audio features that every track on Spotify. 
+               The significance of this data is that Spotify uses this raw audio data in multiple ways.
+               Spotify's recommendation system, Spotify Wrapped, and the way how Spotify generates user taste profiles come from analyzing
+               all of these audio features and more. This specific set of data focuses on the user's overall mood/taste profile.
+                <br>
+                <br>
+               Instructions
+                <br>
+                <br>
+               To start viewing these audio features of a specific song in Spotify, 
+               pass in the link of that Spotify track into the link textbox and click on the Submit Link.
+               Once you do that, a graph containing those values/confidence levels on a scale of 0.0 to 1.0 shall appear.
+               If you are ever confused as to what one of these audio features represent/mean, 
+               take a look at the Audio Features Definitions column. 
+               When you click on the respective name of that audio feature, you will be provided with how Spotify accesses these features in their database.
+            </p>
+        </div>
+    </div>
+
     <div class="sidebar"> 
         <img src="https://static.vecteezy.com/system/resources/previews/018/930/579/original/spotify-app-logo-spotify-icon-transparent-free-png.png">
         <h1 class="descriptions-header">Audio Feature Descriptions</h1>
@@ -70,14 +108,7 @@
         </div>
     
     </div>
-    <header>
-        <nav id="header-nav">
-            <h1 class="header-image">
-            </h1>
-            <ul></ul>
-            <h1 class="Title" id="AppName">Spotify Moods
-            </nav>
-     </header>
+    
         
 
 
@@ -89,11 +120,12 @@
                 <input type="text" name="spotify-link" id="input" placeholder="Link...">
                 <input type="submit" value="Submit Link" id="submit-button">
             </form>
+            <ul></ul>
         </div>
 
         <div id="dviz">
 
-    </div>
+        </div>
 
     </div>
 </body>

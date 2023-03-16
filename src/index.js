@@ -9,6 +9,12 @@ import barGraph from "./scripts/barGraph.js";
     //invoke that render method inside that constructor of spiderChart
 
 document.addEventListener("DOMContentLoaded", () => {
+    function displayModalAtStart () {
+        document.getElementById("modal-button").click();
+    };
+
+    displayModalAtStart();
+
     const myApp = document.getElementById("App");
     const newApp = new App(myApp);
 
@@ -33,7 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const modal = document.getElementById("modal");
+    const button = document.getElementById("modal-button");
+    const span = document.getElementsByClassName("close")[0];
 
+    button.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 })
 
 

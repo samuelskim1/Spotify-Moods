@@ -91,9 +91,8 @@ class BarGraph {
             .style('font-size', 20)
             .style('font-weight', 500)
             .style("text-decoration", "underline")
-            .style("overflow-wrap", "break-word")
+            .style("overflow", "visible")
             // .style("block-size", "fit-content")
-            
             .attr("text-anchor", "middle")
             .attr("x", width/2)
             .attr("y", 0 - (margin.top /2))
@@ -109,11 +108,21 @@ class BarGraph {
             .attr('height', (data) => height - yScale(data[1]))
             .attr('x', data => xScale(data[0]))
             .attr('y', data => yScale(data[1]))
-            .attr("fill", "#C1B985")
+            .style("fill", "#090979")
             .style("stroke", 'black')
             .attr("stroke-linecap", "round")
-
+        
+        // d3.select('.bar')
+        // d3.selectAll('.bar')
+        //     .transition()
+        //     .duration(1000)
+        //     // .attr('x', data => xScale(data[0]))
+        //     .attr('width', xScale.bandwidth())
+            
+        //     .attr('height', (data) => height - yScale(data[1]))
         //can pass in a variable/function that has access to the div
+
+
     }
 
 

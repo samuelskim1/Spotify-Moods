@@ -1,35 +1,115 @@
 @import "./styles/heatmap.scss";
 @import "./styles/css_reset.scss";
 
+header {
+    margin-left: 15%;
+    // position: sticky;
+    // top: 0;
+}
+
+#navbar {
+    width: 100%;
+    background-color: #050505;
+    overflow: auto;
+}
+
+#navbar a {
+    float: right;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+}
+
+#navbar button {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    background-color: black;
+    border: #000000;
+    cursor: pointer;
+}
+
+#navbar a:hover {
+    background-color: #6e6d6d;
+}
+
+.navbar button:hover {
+    background-color: #6e6d6d;
+}
+
+// /*automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
 .sidebar{
     height: 100%;
     width: 15%;
+    max-width: 100%;
     position: fixed;
     z-index: 1;
     top:0;
     left: 0;
-    // background: rgb(2, 0, 36);
-    //     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-    // background: rgb(2, 0, 36);
-    //     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-    // background: rgb(2, 0, 36);
-    //     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    overflow: auto;
     background: rgb(2, 0, 36);
         background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 
 }
 
-header {
-    margin-left: 15%;
+
+#modal {
+    display: none; //Hidden by default
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
 }
 
-#AppName {
+#modal-content {
+    background: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
     color: white;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color:black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
 .main {
     margin-left:15%;
+    // overflow: auto;
 }
 
 img {
@@ -79,14 +159,6 @@ img {
     display: none;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-
-    
-    
-}
-
-#header-nav {
-    // position: fixed;
-    // z-index: 2;
 }
 
 img {
@@ -99,7 +171,7 @@ img {
 body {
     min-height: 100vh ;
     width: 100%;
-    display: flex;
+    overflow: auto;
     background-color: #983275;
         background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
     // background-color: #2b1d42;
@@ -123,13 +195,18 @@ body {
     color: white;
 }
 
+#App {
+    position: sticky;
+    top: 15;
+    opacity: 0.9;
+}
+
 #link-form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     height: 100px;
-
 }
 
 #link-form > label{
@@ -170,13 +247,9 @@ input::placeholder {
     font-family: 'Roboto Mono', monospace;
     font-size: 32px;
     font-weight: 700;
-    color: white
+    color: #ffffff
 }
 
-.axis {
-    color:white;
+.title {
+    fill: white;
 }
-// #yTitle {
-//     font-size: 30;
-// }
-

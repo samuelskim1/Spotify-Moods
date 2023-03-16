@@ -21,6 +21,8 @@ class App {
 
                 //d3 stuff will happen in the render method of barChart
                     //that render method will take in the finalized data of the track itself
+
+            document.getElementById("link-form").reset();        
         })
     }
 
