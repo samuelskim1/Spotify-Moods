@@ -7,6 +7,9 @@ JS Project Proposal: Spotify Moods
 Spotify Wrapped has been a viral marketing campaign amongst Spotify (one of the leading music streaming service providers) users over the past 7 years. It allows its users to view their activity on the platform of over the past year through creative 
 and engaging visualizations of their data. This project will dive deeper in the Spotify API and create a data visualization of the raw audio data that Spotify collects from songs. 
 
+![image](https://user-images.githubusercontent.com/116222606/225712991-12a890d4-a8f4-45eb-926a-398cd33e79b0.png)
+
+
 Spotify's API allows developers to view extra various audio features of a song. This is not an extensive list of all the features but the ones that will be visualized are these:
 
 - Danceability
@@ -27,6 +30,8 @@ Spotify's API allows developers to view extra various audio features of a song. 
 
 This project will display the value of these features for a song on multiple graphs. A lot of these categories and their values can be indicators of the user's mood/taste profile. 
 
+![image](https://user-images.githubusercontent.com/116222606/225713287-4ffa471e-855c-432b-ab84-7d6d4ae1e3dc.png)
+
 ## Functionality & MVPs ##
 
 With this project, users will be able to: 
@@ -44,11 +49,12 @@ In addition, this project will include:
 
   <img width="470" alt="Second JS Project Wireframe" src="https://user-images.githubusercontent.com/116222606/225642175-d8bf418f-9874-4a4a-b315-9af9059d609d.png">
 
-
 - Nav links include links to this project's Github repo, my LinkedIn, and the About modal
 - On the left:
    - there will be a sidebar with a description for each audio feature
       - Implement this using a accordion (BONUS)
+
+![image](https://user-images.githubusercontent.com/116222606/225713581-9c62c47a-c90b-4641-980c-8487af932e2a.png)
 
 ## Technologies, Libraries, APIs ##
 
