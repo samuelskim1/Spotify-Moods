@@ -10,30 +10,30 @@ and engaging visualizations of their data. This project will dive deeper in the 
 Spotify's API allows developers to view extra various audio features of a song. This is not an extensive list of all the features but the ones that will be visualized are these:
 
 - Danceability
-   -Describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity
+   - Describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity
 - Valence
-   -A measure describing the musical positiveness conveyed by a track
+   - A measure describing the musical positiveness conveyed by a track
 - Energy
-   -Represents a perceptual measure of intensity and activity
+   - Represents a perceptual measure of intensity and activity
 - Acousticness
-   -A confidence measure of whether the track is acoustic
+   - A confidence measure of whether the track is acoustic
 - Liveness
-   -Detects the presence of an audience in the recording
+   - Detects the presence of an audience in the recording
 - Loudness
-   -The overall loudness of a track in decibels (dB)
+   - The overall loudness of a track in decibels (dB)
 - Speechiness
-   -Presence of spoken words in a track
+   - Presence of spoken words in a track
 
 
-Thie project will display the value of these features for a song on multiple graphs. A lot of these categories and their values can be indicators of the user's mood/taste profile. 
+This project will display the value of these features for a song on multiple graphs. A lot of these categories and their values can be indicators of the user's mood/taste profile. 
 
 ## Functionality & MVPs ##
 
 With this project, users will be able to: 
--Implementing Client Credientials Flow and properly fetching from Spotify's API
--Render a graph of audio features for a track by simply submitting a spotify link
--View definitions for the audio features. 
--Implement ways to select between different graphs. 
+- Implementing Client Credentials Flow and properly fetching from Spotify's API
+- Render a graph of audio features for a track by simply submitting a spotify link
+- View definitions for the audio features. 
+- Implement ways to select between different graphs. 
 - Select between which songs they would like to be displayed
 
 In addition, this project will include:
@@ -48,14 +48,14 @@ In addition, this project will include:
 - Nav links include links to this project's Github repo, my LinkedIn, and the About modal
 - On the left:
    - there will be a sidebar with a description for each audio feature
-      - Implement this using a accordian (BONUS)
+      - Implement this using a accordion (BONUS)
 
 ## Technologies, Libraries, APIs ##
 
 This project will be implemented with the following technologies:
 - The D3 Library to create graphs and shapes that dynamically presents the data from the Spotify API
--Webpack to bundle and transpile the source JavaScript code
--Npm to manage project dependencies
+- Webpack to bundle and transpile the source JavaScript code
+- Npm to manage project dependencies
 
 ## Implementation Timeline ##
 
@@ -72,9 +72,9 @@ This project will be implemented with the following technologies:
 
 ## Bonus features ##
 There are many directions that this projects could eventually go. Some anticipated updates are:
-- Implemnting the search bar to take in multiple tracks at once and handle playlist links
+- Implementing the search bar to take in multiple tracks at once and handle playlist links
 - Once the number of graphs exceeds a certain point, create a heatmap to better display larger sample sizes
-- Implementing an accordian for all of the audio feature descriptions
+- Implementing an accordion for all of the audio feature descriptions
 - Implement a way to select between what tracks to display
 
  
