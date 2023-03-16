@@ -36,6 +36,17 @@ This project will display the value of these features for a song on multiple gra
 
 With this project, users will be able to: 
 - Implementing Client Credentials Flow and properly fetching from Spotify's API
+
+How I am able to fetch and properly render a graph all from the submit button:
+- ![image](https://user-images.githubusercontent.com/116222606/225716746-112f3bde-ad74-4059-abbf-c7c486eeb0dc.png)
+- ![image](https://user-images.githubusercontent.com/116222606/225717186-6626673d-b110-4467-8fca-f7abbe609f86.png)
+- ![image](https://user-images.githubusercontent.com/116222606/225717356-238be6b1-eb14-43ca-80df-b87443de73eb.png)
+   - Snippet of my code in my fetchAccessToken method:
+      - ![image](https://user-images.githubusercontent.com/116222606/225716943-867ea033-eb19-4879-a7f2-e0dd36a713d1.png)
+
+
+
+
 - Render a graph of audio features for a track by simply submitting a spotify link
 - View definitions for the audio features. 
 - Implement ways to select between different graphs. 
