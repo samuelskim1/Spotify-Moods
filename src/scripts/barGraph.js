@@ -9,8 +9,8 @@ class BarGraph {
 
         //creating margins and dimensions
         const margin = { top: 60, right: 60, bottom: 100, left: 80 },
-            width = 550 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
+            width = 600 - margin.left - margin.right,
+            height = 550 - margin.top - margin.bottom;
 
 
         //creating svg and the graph elements
@@ -24,6 +24,11 @@ class BarGraph {
                 `translate(${margin.left}, ${margin.top})`
             );
 
+        // debugger;
+        (this.audioFeatures).sort(function(b,a) {
+            return a[1] - b[1];
+        });
+
         //X axis
         const xScale = d3.scaleBand()
             .domain(this.audioFeatures.map(dataPoint => dataPoint[0]))
@@ -34,9 +39,9 @@ class BarGraph {
             .attr("transform", `translate(0, ${height})`)
             .attr("class", "axis")
             .attr("id", "xAxis")
-            // .style("font-family", "Roboto Mono", "monospace")
-            // .style("font-size", 20)
-            // .style("font-weight", 700)
+            .style("font-family", "Roboto Mono", "monospace")
+            .style("font-size", 14)
+            .style("font-weight", 700)
             .call(d3.axisBottom(xScale))
             .selectAll("text")
             .attr("transform", "translate(-10, 0)rotate(-45)")
@@ -64,7 +69,7 @@ class BarGraph {
             .attr("class", "axis")
             .attr("id", "yAxis")
             .style("font-family", "Roboto Mono", "monospace")
-            .style("font-size", 20)
+            .style("font-size", 14)
             .style("font-weight", 500)
             .call(d3.axisLeft(yScale));
 
@@ -87,15 +92,19 @@ class BarGraph {
         const graphTitle = svg.append("text")
             .classed("title", true)
             .attr('id', 'graphTitle')
-            .style("font-family", "Roboto Mono", "monospace")
-            .style('font-size', 20)
-            .style('font-weight', 500)
-            .style("text-decoration", "underline")
-            .style("overflow", "visible")
-            // .style("block-size", "fit-content")
             .attr("text-anchor", "middle")
+            .attr("overflow", "scroll")
             .attr("x", width/2)
             .attr("y", 0 - (margin.top /2))
+            .attr("width", "1em")
+            .attr("textLength", "80%")
+            .style("text-wrap", "550px")
+            .style("font-family", "Roboto Mono", "monospace")
+            .style('font-size', "20px")
+            .style('font-weight', "500")
+            .style("text-decoration", "underline")
+
+            
             .text(`${this.trackInfo}`)
             
         const bars = svg
@@ -105,24 +114,24 @@ class BarGraph {
             .append('rect') //valid svg element that we can use inside of an SVG NODE
             .classed('bar', true)
             .attr('width', xScale.bandwidth()) //sets the width of the element 
-            .attr('height', (data) => height - yScale(data[1]))
+            .attr('height', (data) => height - yScale(0))
             .attr('x', data => xScale(data[0]))
-            .attr('y', data => yScale(data[1]))
-            .style("fill", "#090979")
+            .attr('y', data => yScale(0))
+            .attr("fill", "#C1B985")
             .style("stroke", 'black')
             .attr("stroke-linecap", "round")
-        
-        // d3.select('.bar')
-        // d3.selectAll('.bar')
-        //     .transition()
-        //     .duration(1000)
-        //     // .attr('x', data => xScale(data[0]))
-        //     .attr('width', xScale.bandwidth())
-            
-        //     .attr('height', (data) => height - yScale(data[1]))
+
+        svg.selectAll("rect")
+            .transition()
+            .duration(1000)
+            .attr('y', data => yScale(data[1]))
+            .attr('height', (data) => height - yScale(data[1]))
+            .delay(function(d,i) {
+                console.log(i);
+                return(i * 100)
+            })
+
         //can pass in a variable/function that has access to the div
-
-
     }
 
 

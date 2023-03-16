@@ -1,5 +1,7 @@
 @import "./styles/heatmap.scss";
 @import "./styles/css_reset.scss";
+@import "./styles/barGraph.scss";
+@import "./styles/sideBar.scss";
 
 header {
     margin-left: 15%;
@@ -52,21 +54,6 @@ header {
     }
 }
 
-.sidebar{
-    height: 100%;
-    width: 15%;
-    max-width: 100%;
-    position: fixed;
-    z-index: 1;
-    top:0;
-    left: 0;
-    overflow: auto;
-    background: rgb(2, 0, 36);
-        background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-
-}
-
-
 #modal {
     display: none; //Hidden by default
     position: fixed;
@@ -112,61 +99,6 @@ header {
     // overflow: auto;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.descriptions-header {
-    text-align: center;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 20px;
-}
-
-
-
-.accordion {
-    text-align: center;
-    background-color: #605f5f;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 20;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 12px;
-    width: 100%;
-    border: none;
-    // outline:#ec1c1c;
-    transition: 0.4s;
-}
-
-.active, .accordion:hover {
-    background-color: rgb(69, 69, 69)
-}
-
-.panel {
-    padding: 18px 18px;
-    background-color: rgb(52, 51, 51);
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
-    max-height: 0;
-    display: none;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-img {
-    height: 100px;
-    width: 100px;
-    // background: linear-gradient(0deg, rgba(249, 252, 69, 1) 100%);
-    // background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
-}
 
 body {
     min-height: 100vh ;
@@ -178,12 +110,6 @@ body {
     //     background-image: linear-gradient(0deg, #2b1d42 0%, #4a2f48 25%, #8f3d4b 49%, #f3b88d 75%, #fceccb 100%);
     // background: rgb(61, 58, 180);
     //     background: linear-gradient(0deg, rgba(61, 58, 180, 1) 0%, rgba(253, 72, 29, 1) 50%, rgba(249, 252, 69, 1) 100%);
-}
-#dviz {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px;
 }
 
 #AppName {
@@ -219,10 +145,14 @@ body {
     
 }
 
+
+
+
+
 input::placeholder {
     font-family: 'Roboto Mono', monospace;
     text-align: center;
-
+    
 }
 
 #input {
@@ -254,13 +184,11 @@ input::placeholder {
     border-color: rgb(181, 49, 49);
 }
 
-.axis {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 32px;
-    font-weight: 700;
-    color: #ffffff
+#dviz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
 }
 
-.title {
-    fill: white;
-}
+
