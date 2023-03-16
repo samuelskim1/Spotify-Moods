@@ -42,7 +42,7 @@ In addition, this project will include:
 
 ## Wireframe ##
 
-  <img width="515" alt="JS Project Wireframe" src="https://user-images.githubusercontent.com/116222606/224135459-064283e9-fa37-4a13-b61a-3a4dad696c54.png">
+  <img width="470" alt="Second JS Project Wireframe" src="https://user-images.githubusercontent.com/116222606/225642175-d8bf418f-9874-4a4a-b315-9af9059d609d.png">
 
 
 - Nav links include links to this project's Github repo, my LinkedIn, and the About modal
