@@ -40,7 +40,7 @@ header {
     background-color: #6e6d6d;
 }
 
-.navbar button:hover {
+#modal-button:hover {
     background-color: #6e6d6d;
 }
 
@@ -241,6 +241,17 @@ input::placeholder {
     color: rgb(181, 49, 49);
     border-radius: 15px;
     border-color: white;
+}
+
+#submit-button:hover{
+    width: 100px;
+    height: 30px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    background-color: rgb(181, 49, 49);
+    color: white;
+    border-radius: 15px;
+    border-color: rgb(181, 49, 49);
 }
 
 .axis {
