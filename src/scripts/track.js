@@ -31,7 +31,7 @@ class Track {
     }
 
     filteredTrackInfo () {
-        const axisTitle = `${this.name}` + ' - ' + `${this.artist}`;
+        const axisTitle = `${this.name} - ${this.artist}`;
         return axisTitle;
     }
 
