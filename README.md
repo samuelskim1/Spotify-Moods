@@ -1,4 +1,4 @@
-# jSpotify Moods
+# Spotify Moods
 
 JS Project Proposal: Spotify Moods
 
