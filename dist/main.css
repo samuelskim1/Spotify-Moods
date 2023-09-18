@@ -200,7 +200,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#modal-content {
+#modal-content{
   background: #000000;
   margin: 15% auto;
   padding: 20px;
@@ -212,6 +212,10 @@ header {
   font-size: 20px;
 }
 
+#modal-text{
+  padding: 80px;
+}
+
 .close {
   color: #aaa;
   float: right;
@@ -221,7 +225,7 @@ header {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(216, 28, 28);
   text-decoration: none;
   cursor: pointer;
 }

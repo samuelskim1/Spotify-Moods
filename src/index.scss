@@ -79,6 +79,11 @@ header {
     font-size: 20px;
 }
 
+#modal-text {
+    padding: 80px;
+}
+
+
 .close {
     color: #aaa;
     float: right;
@@ -88,7 +93,7 @@ header {
 
 .close:hover,
 .close:focus {
-    color:black;
+    color:rgb(216, 28, 28);
     text-decoration: none;
     cursor: pointer;
 }
