@@ -6,16 +6,19 @@ class BarGraph {
     }
 
     renderGraph() {
-
+        // const deleteSvg = d3.select('#dviz').selectAll("svg").remove();
+        d3.selectAll('.svgs').remove();
+        console.log("hello");
+        
         //creating margins and dimensions
         const margin = { top: 60, right: 60, bottom: 100, left: 80 },
             width = 600 - margin.left - margin.right,
             height = 550 - margin.top - margin.bottom;
 
-
+        
         //creating svg and the graph elements
         const svg = d3.select('#dviz')
-            .classed('container', true)//adding a class, boolean determines whether the class should be added/not
+            .classed('containerzzzz', true)//adding a class, boolean determines whether the class should be added/not
             .append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
@@ -34,6 +37,9 @@ class BarGraph {
             .domain(this.audioFeatures.map(dataPoint => dataPoint[0]))
             .rangeRound([0, width])
             .padding(0.5)
+
+        d3.select("svg").classed("svgs",true);
+
 
         svg.append("g")
             .attr("transform", `translate(0, ${height})`)
@@ -147,6 +153,7 @@ class BarGraph {
             .attr('height', (data) => height - yScale(data[1]))
             .delay(function(d,i) {
                 console.log(i);
+                console.log("hello");
                 return(i * 100)
             })
 

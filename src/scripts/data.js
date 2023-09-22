@@ -100,6 +100,9 @@ class Data {
                     .then(audioFeatures => {
                         const track = new Track(trackInfo, audioFeatures);
                         const barGraph = new BarGraph(track.filteredAudioFeatures(), track.filteredTrackInfo());
+                        d3.select('#dviz').selectAll("svg").remove();
+                        // const dviz = document.getElementById("dviz");
+                        // dviz.innerHTML = 0;
                         barGraph.renderGraph();
                     })
                 }) 
