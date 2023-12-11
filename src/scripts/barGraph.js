@@ -108,7 +108,7 @@ class BarGraph {
             .style("font-family", "Roboto Mono", "monospace")
             .style('font-size', "20px")
             .style('font-weight', "500")
-            .style("text-decoration", "underline")
+            // .style("text-decoration", "underline")
             .text(`${this.trackInfo}`)
         
         // const tooltip = d3.select("#dviz")

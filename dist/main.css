@@ -1,3 +1,315 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}text{font-family:"Roboto Mono",monospace;font-weight:700}.axis{font-family:"Roboto Mono",monospace;font-size:"15";font-weight:"700";color:#fff}.title{fill:#fff}.bar{fill:#090979}#dviz>svg{padding:50px}.sidebar{height:100%;width:15%;max-width:100%;position:fixed;z-index:1;top:0;left:0;overflow:auto;background:#020024;background:linear-gradient(0deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%)}img{height:100px;width:100px;display:block;margin-left:auto;margin-right:auto}.descriptions-header{text-align:center;color:#fff;font-family:"Roboto Mono",monospace;font-size:20px;font-weight:700;padding:20px}.accordion{text-align:center;background-color:#605f5f;color:#fff;font-family:"Roboto Mono",monospace;font-size:20;font-weight:700;cursor:pointer;padding:12px;width:100%;border:none;transition:.4s}.active,.accordion:hover{background-color:#454545}.panel{padding:18px 18px;background-color:#343333;color:#fff;font-family:"Roboto Mono",monospace;font-weight:300;max-height:0;display:none;overflow:hidden;transition:max-height .2s ease-out}header{margin-left:15%}#navbar{width:100%;background-color:#050505;overflow:auto}#navbar a{float:right;text-align:center;padding:12px;color:#fff;text-decoration:none;font-family:"Roboto Mono",monospace;font-size:20px}#navbar button{float:left;text-align:center;padding:12px;color:#fff;text-decoration:none;font-family:"Roboto Mono",monospace;font-size:20px;background-color:#000;border:#000;cursor:pointer}#navbar a:hover{background-color:#6e6d6d}#modal-button:hover{background-color:#6e6d6d}@media screen and (max-width: 500px){.navbar a{float:none;display:block}}#modal{display:none;position:fixed;z-index:2;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:#000;background-color:rgba(0,0,0,.5)}#modal-content{background:#000;margin:15% auto;padding:20px;border:1px solid #888;width:60%;color:#fff;text-align:center;font-family:"Roboto Mono",monospace;font-size:20px}#modal-text{padding:80px}.close{color:#aaa;float:right;font:28px;font-weight:bold}.close:hover,.close:focus{color:#d81c1c;text-decoration:none;cursor:pointer}.main{margin-left:15%}body{min-height:100vh;width:100%;overflow:auto;background-color:#983275;background-image:linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%)}#AppName{font-family:"Roboto Mono",monospace;font-weight:700;font-size:42;padding:70px 0;text-align:center;color:#fff}#App{position:sticky;top:15;opacity:.9}#link-form{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100px}#link-form>label{font-family:"Roboto Mono",monospace;font-size:20px;font-weight:700;color:#fff;justify-content:center}input::placeholder{font-family:"Roboto Mono",monospace;text-align:center}#input{border-color:#fff;border-radius:15px;background-color:#fff;width:300px}#submit-button{width:100px;height:30px;font-family:"Roboto Mono",monospace;font-weight:700;background-color:#fff;color:#b53131;border-radius:15px;border-color:#fff}#submit-button:hover{width:100px;height:30px;font-family:"Roboto Mono",monospace;font-weight:700;background-color:#b53131;color:#fff;border-radius:15px;border-color:#b53131}#dviz{display:flex;flex-wrap:wrap;justify-content:center;margin:40px}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-/*# sourceMappingURL=main.css.map*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+text {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+}
+
+.axis {
+  font-family: "Roboto Mono", monospace;
+  font-size: "15";
+  font-weight: "700";
+  color: #ffffff;
+}
+
+.title {
+  fill: white;
+}
+
+.bar {
+  fill: rgb(9, 9, 121);
+}
+
+#dviz > svg {
+  padding: 50px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 15%;
+  max-width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.descriptions-header {
+  text-align: center;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.accordion {
+  text-align: center;
+  background-color: #605f5f;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgb(69, 69, 69);
+}
+
+.panel {
+  padding: 18px 18px;
+  background-color: rgb(52, 51, 51);
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  max-height: 0;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+header {
+  margin-left: 15%;
+}
+
+#navbar {
+  width: 100%;
+  background-color: #050505;
+  overflow: auto;
+}
+
+#navbar a {
+  float: right;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+}
+
+#navbar button {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  background-color: black;
+  border: #000000;
+  cursor: pointer;
+}
+
+#navbar a:hover {
+  background-color: #6e6d6d;
+}
+
+#modal-button:hover {
+  background-color: #6e6d6d;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal-content {
+  background: #000000;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  color: white;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+}
+
+#modal-text {
+  padding: 80px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(216, 28, 28);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main {
+  margin-left: 15%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background-color: #983275;
+  background-image: linear-gradient(0deg, #983275 0%, #811d5e 24%, #fd2f24 49%, #ff6f01 75%, #fed800 100%);
+}
+
+#AppName {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 42;
+  padding: 70px 0;
+  text-align: center;
+  color: white;
+}
+
+#App {
+  position: sticky;
+  top: 15;
+  opacity: 0.9;
+}
+
+#link-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+#link-form > label {
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  justify-content: center;
+}
+
+input::placeholder {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+
+#input {
+  border-color: white;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+}
+
+#submit-button {
+  width: 100px;
+  height: 30px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  background-color: rgb(255, 255, 255);
+  color: rgb(181, 49, 49);
+  border-radius: 15px;
+  border-color: white;
+}
+
+#submit-button:hover {
+  width: 100px;
+  height: 30px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  background-color: rgb(181, 49, 49);
+  color: white;
+  border-radius: 15px;
+  border-color: rgb(181, 49, 49);
+}
+
+#dviz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px;
+}
